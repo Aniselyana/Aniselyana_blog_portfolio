@@ -85,4 +85,42 @@
             <ul style="list-style: none; color: #9ca3af; line-height: 2;">
                 <li>🚀 <strong>AR ISYARATKU Application:</strong> Aplikasi pembelajaran interaktif Bahasa Isyarat Malaysia (BIM) menggunakan teknologi Augmented Reality (AR) dan integrasi model 3D gerak isyarat tangan.</li>
                 <li>📅 <strong>RM SEHARI Digital Savings Calendar:</strong> Reka bentuk kalendar simpanan digital bertema minimalis untuk pengurusan kewangan harian rakyat Malaysia.</li>
-                <li>🎬 <strong>"The Comment Section" -
+                <li>🎬 <strong>"The Comment Section" - Cyberbullying Awareness Video:</strong> Video kesedaran digital yang memfokuskan kepada impak psikologi akibat buli siber demi memupuk empati dalam komuniti dalam talian.</li>
+                <li>🎮 <strong>Quest Forest: The Lost Totem:</strong> Pembangunan identiti visual dan reka bentuk logo untuk projek permainan mini kreatif.</li>
+            </ul>
+        </section>
+
+        <section class="page-section" id="contact">
+            <h2>Contact Me</h2>
+            <div class="section-line"></div>
+            <p>Jika anda mempunyai sebarang pertanyaan atau ingin berkolaborasi, sila hubungi saya melalui emel rasmi di bawah:</p>
+            <p style="margin-top: 15px;">📧 Emel: <a href="mailto:anisn3823@gmail.com" style="color: #c084fc; text-decoration: none; font-weight: bold;">anisn3823@gmail.com</a></p>
+        </section>
+
+    </div>
+
+    <script>
+    const sections = document.querySelectorAll('.page-section, .main-content');
+    const navLi = document.querySelectorAll('.nav-menu ul li');
+
+    document.querySelector('.content-container').addEventListener('scroll', () => {
+        let current = '';
+        const containerTop = document.querySelector('.content-container').getBoundingClientRect().top;
+
+        sections.forEach(section => {
+            const sectionTop = section.getBoundingClientRect().top - containerTop;
+            if (sectionTop <= 150) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        navLi.forEach(li => {
+            li.classList.remove('active');
+            if (li.querySelector('a').getAttribute('href').includes(current)) {
+                li.classList.add('active');
+            }
+        });
+    });
+    </script>
+</body>
+</html>

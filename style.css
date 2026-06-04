@@ -1,4 +1,6 @@
-/* Tetapan Asas */
+/* ==========================================================================
+   1. TETAPAN ASAS & DESKTOP STYLE
+   ========================================================================== */
 * {
     margin: 0;
     padding: 0;
@@ -128,7 +130,6 @@ body {
     height: 100vh;
     width: 100%;
     position: relative;
-    /* Telah dikemaskini mengikut nama folder images anda */
     background: url('images/background.jpg') no-repeat center center/cover;
     display: flex;
     justify-content: center;
@@ -229,5 +230,112 @@ body {
     }
     60% {
         transform: translateY(-5px);
+    }
+}
+
+/* ==========================================================================
+   2. KOD RESPONSIVE (MOBILE FRIENDLY) - MEDIA QUERY
+   ========================================================================== */
+@media (max-width: 768px) {
+    /* Mengubah aturan skrin supaya boleh diskrol secara menegak di fon */
+    body {
+        flex-direction: column !important;
+        overflow-y: auto !important;
+        height: auto !important;
+    }
+
+    /* Menukarkan Sidebar Kiri menjadi Navigasi Atas (Top Navbar) */
+    .sidebar {
+        width: 100% !important;
+        height: auto !important;
+        padding: 12px 15px !important;
+        border-right: none !important;
+        border-bottom: 1px solid #231b36 !important;
+        position: sticky !important;
+        top: 0 !important;
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        z-index: 999 !important;
+    }
+
+    /* Menyembunyikan elemen padat demi menjimatkan ruang skrin fon */
+    .sidebar-profile .profile-img,
+    .sidebar-footer,
+    .social-icons {
+        display: none !important;
+    }
+
+    .sidebar-profile {
+        margin-bottom: 0 !important;
+        text-align: left !important;
+        width: auto !important;
+    }
+
+    .sidebar-profile h2 {
+        font-size: 0.9rem !important;
+        white-space: nowrap !important;
+    }
+
+    /* Mengatur susunan Menu Navigasi secara melintang (horizontal) */
+    .nav-menu {
+        width: auto !important;
+        flex-grow: 0 !important;
+    }
+
+    .nav-menu ul {
+        display: flex !important;
+        flex-direction: row !important;
+        gap: 8px !important;
+    }
+
+    .nav-menu ul li {
+        margin-bottom: 0 !important;
+    }
+
+    /* Menyembunyikan teks menu ("Home", "About Me") dan kekalkan ikon/emoji sahaja */
+    .nav-menu ul li a .menu-text {
+        display: none !important;
+    }
+
+    .nav-menu ul li a {
+        padding: 8px 10px !important;
+    }
+
+    .menu-icon {
+        margin-right: 0 !important;
+        font-size: 1.2rem !important; /* Saiz mesra sentuhan jari */
+    }
+
+    /* Mengubah suai Kontena Kandungan utama */
+    .content-container {
+        width: 100% !important;
+        height: auto !important;
+        overflow-y: visible !important;
+    }
+
+    /* Mengecilkan saiz teks tajon utama di telefon pintar */
+    .hero-text h1 {
+        font-size: 1.7rem !important;
+        line-height: 1.3 !important;
+    }
+
+    .hero-text p {
+        font-size: 0.95rem !important;
+        padding: 0 10px !important;
+    }
+
+    .scroll-down {
+        margin-top: 50px !important;
+    }
+
+    /* Laraskan ruang padding bagi setiap seksyen halaman bawah */
+    .page-section {
+        padding: 50px 20px !important;
+        min-height: auto !important;
+    }
+
+    .page-section h2 {
+        font-size: 1.7rem !important;
     }
 }
