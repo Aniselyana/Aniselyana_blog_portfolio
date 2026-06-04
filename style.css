@@ -35,10 +35,10 @@ body {
 .profile-img {
     width: 100px;
     height: 100px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid #a855f7; /* Bingkai warna ungu terang */
-    margin-bottom: 15px;
+    border-radius: 50%;         /* Membulatkan gambar */
+    object-fit: cover;          /* Mengelakkan gambar daripada penyek/leper */
+    border: 2px solid #8a2be2;  /* Border ungu halus di keliling gambar */
+    margin-bottom: 10px;
 }
 
 .sidebar-profile h2 {
@@ -56,23 +56,16 @@ body {
     margin-bottom: 30px;
 }
 
-.social-icons .icon {
-    width: 30px;
-    height: 30px;
-    background-color: #231b36;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #d8b4fe;
-    text-decoration: none;
-    font-size: 0.85rem;
-    transition: 0.3s;
+.social-icons a {
+    color: #bb86fc;             /* Warna ungu pastel supaya lebih terang */
+    font-size: 18px;
+    margin: 0 10px;             /* Memberi jarak antara ikon */
+    transition: all 0.3s ease;
 }
 
-.social-icons .icon:hover {
-    background-color: #a855f7;
-    color: #fff;
+.social-icons a:hover {
+    color: #ffffff;             /* Tukar jadi putih bila hover */
+    text-shadow: 0 0 8px #bb86fc; /* Kesan bercahaya (glow effect) */
 }
 
 /* Menu Navigasi */
@@ -234,5 +227,20 @@ body {
     }
     60% {
         transform: translateY(-4px);
+    }
+    /* Gantikan class anak panah anda (contohnya .scroll-arrow) dengan kod ini */
+.scroll-arrow {
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
     }
 }
