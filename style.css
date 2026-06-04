@@ -1,366 +1,134 @@
-/* ==========================================================================
-   1. TETAPAN DESKTOP (SIDEBAR SISI KIRI)
-   ========================================================================== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Nurul Anis Elyana</title>
+    <link rel="stylesheet" href="style.css?v=12.0_jpeg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
 
-body {
-    display: flex;
-    background-color: #0c0a12;
-    color: #ffffff;
-    height: 100vh;
-    overflow: hidden; /* Mengunci keseluruhan skrol rawak */
-}
+    <aside class="sidebar">
+        <div class="sidebar-profile">
+            <div class="profile-img-container">
+                <img src="images/profile.jpeg" alt="Anis" class="profile-img">
+            </div>
+            <h2>Nurul Anis Elyana Binti Sahiron</h2>
+            <p class="profile-tag">Media Informatics Specialist</p>
+        </div>
+        
+        <div class="social-icons">
+            <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="mailto:anisn3823@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
 
-.sidebar {
-    width: 260px;
-    background-color: #120e1e;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 30px 15px;
-    border-right: 1px solid #231b36;
-    flex-shrink: 0;
-    z-index: 100;
-}
+        <nav class="nav-menu">
+            <ul>
+                <li class="menu-item-home active"><a href="#home"><i class="fas fa-home"></i><span class="menu-text">Home</span></a></li>
+                <li><a href="#about"><i class="fas fa-user"></i><span class="menu-text">About</span></a></li>
+                <li><a href="#resume"><i class="fas fa-file-alt"></i><span class="menu-text">Resume</span></a></li>
+                <li><a href="#articles"><i class="fas fa-project-diagram"></i><span class="menu-text">Projects</span></a></li>
+                <li><a href="#contact"><i class="fas fa-paper-plane"></i><span class="menu-text">Contact</span></a></li>
+            </ul>
+        </nav>
 
-.sidebar-profile {
-    text-align: center;
-    margin-bottom: 20px;
-    width: 100%;
-}
+        <div class="sidebar-footer">
+            <p>© 2026 AnisMedia.<br>CSD34203 Elite.</p>
+        </div>
+    </aside>
+        
+    <div class="content-container">
+        
+        <main class="page-section-hero" id="home">
+            <div class="hero-overlay"></div>
+            <div class="hero-text">
+                <h1>Nurul Anis Elyana Binti Sahiron</h1>
+                <p>I am a final-year student majoring in <span class="highlight">Informatics Media</span> at UniSZA.</p>
+            </div>
+        </main>
 
-.profile-img-container {
-    width: 110px;
-    height: 110px;
-    border-radius: 50%;
-    border: 3px solid #c084fc;
-    margin: 0 auto 15px auto;
-    background-color: #231b36;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+        <section class="page-section" id="about">
+            <h2>About Me</h2>
+            <div class="section-line"></div>
+            <div class="wow-grid">
+                <div class="wow-card full-width">
+                    <p>
+                        Saya merupakan pelajar tahun akhir dalam bidang <strong>Ijazah Sarjana Muda Teknologi Maklumat (Media Informatika)</strong> di UniSZA. 
+                        Fokus utama saya adalah dalam pembangunan aplikasi pendidikan berasaskan teknologi moden seperti <em>Augmented Reality</em> (AR) serta penciptaan kandungan digital yang kreatif dan membawa impak sosial.
+                    </p>
+                </div>
+            </div>
+        </section>
 
-.profile-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+        <section class="page-section" id="resume">
+            <h2>Resume</h2>
+            <div class="section-line"></div>
+            <div class="wow-grid">
+                <div class="wow-card">
+                    <h3><i class="fas fa-graduation-cap"></i> Pendidikan</h3>
+                    <p style="margin-top: 10px;">• Ijazah Sarjana Muda Teknologi Maklumat (Media Informatika) dengan Kepujian, UniSZA</p>
+                </div>
+                <div class="wow-card">
+                    <h3><i class="fas fa-tools"></i> Kepakaran Utama</h3>
+                    <p style="margin-top: 10px;">• Pembangunan AR (Unity & Vuforia Engine)</p>
+                    <p>• Reka Bentuk Grafik & UI/UX (Flat Vector Style)</p>
+                </div>
+                <div class="wow-card full-width" style="text-align: center;">
+                    <a href="#" class="download-btn"><i class="fas fa-download"></i> Download CV (PDF)</a>
+                </div>
+            </div>
+        </section>
 
-.sidebar-profile h2 {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #ffffff;
-    line-height: 1.4;
-}
+        <section class="page-section" id="articles">
+            <h2>Articles & Projects</h2>
+            <div class="section-line"></div>
+            <div class="wow-grid">
+                <div class="wow-card interactive">
+                    <div class="project-tag">Augmented Reality</div>
+                    <h3>AR ISYARATKU Application</h3>
+                    <p>Pembangunan aplikasi pembelajaran Bahasa Isyarat Malaysia (BIM) interaktif menggunakan teknologi Augmented Reality.</p>
+                </div>
+                <div class="wow-card interactive">
+                    <div class="project-tag">FinTech Design</div>
+                    <h3>RM SEHARI Digital Savings Calendar</h3>
+                    <p>Kalendar simpanan digital bertema minimalis untuk pengurusan kewangan harian rakyat Malaysia.</p>
+                </div>
+            </div>
+        </section>
 
-.social-icons {
-    display: flex;
-    gap: 12px;
-    margin-bottom: 25px;
-}
+        <section class="page-section" id="contact">
+            <h2>Contact Me</h2>
+            <div class="section-line"></div>
+            <div class="wow-grid">
+                <div class="wow-card full-width" style="text-align: center; padding: 40px 20px;">
+                    <div class="contact-icon-wrapper">
+                        <i class="fas fa-envelope-open-text"></i>
+                    </div>
+                    <p style="margin-bottom: 15px;">Jika anda mempunyai sebarang pertanyaan atau ingin berkolaborasi, sila hubungi saya melalui emel rasmi:</p>
+                    <a href="mailto:anisn3823@gmail.com" class="email-highlight">anisn3823@gmail.com</a>
+                </div>
+            </div>
+        </section>
 
-.social-icons a {
-    color: #9ca3af;
-    background-color: #231b36;
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 16px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
+    </div>
 
-.social-icons a:hover {
-    color: #0c0a12;
-    background-color: #c084fc;
-}
-
-.nav-menu {
-    width: 100%;
-    flex-grow: 1;
-}
-
-.nav-menu ul {
-    list-style: none;
-}
-
-.nav-menu ul li {
-    margin-bottom: 8px;
-}
-
-.nav-menu ul li a {
-    display: flex;
-    align-items: center;
-    padding: 12px 15px;
-    color: #9ca3af;
-    text-decoration: none;
-    font-size: 0.95rem;
-    font-weight: 500;
-    border-radius: 8px;
-    transition: 0.3s;
-}
-
-.nav-menu ul li.active a,
-.nav-menu ul li:hover a {
-    background-color: #231b36;
-    color: #c084fc;
-}
-
-.menu-icon {
-    margin-right: 15px;
-    font-size: 1.1rem;
-}
-
-.sidebar-footer {
-    text-align: center;
-    font-size: 0.75rem;
-    color: #6b7280;
-    line-height: 1.5;
-}
-
-/* --- Pengurusan Halaman Kandungan Kanan --- */
-.content-container {
-    flex-grow: 1;
-    height: 100vh;
-    position: relative;
-    overflow: hidden;
-}
-
-.page-section, 
-.page-section-hero {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    padding: 80px 50px;
-    background-color: #0c0a12;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.5s ease-in-out;
-    z-index: 1;
-    overflow-y: auto; /* Membenarkan skrol dalaman jika teks melebihi saiz skrin */
-}
-
-.page-section-hero {
-    background: url('images/background.jpg') no-repeat center center/cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 20px;
-}
-
-.hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(12, 10, 18, 0.85);
-    z-index: 1;
-}
-
-.hero-text {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-}
-
-.hero-text h1 {
-    font-size: 3rem;
-    font-weight: bold;
-    margin-bottom: 15px;
-}
-
-.hero-text p {
-    font-size: 1.2rem;
-    color: #e5e7eb;
-}
-
-.highlight {
-    color: #c084fc;
-}
-
-.page-section h2 {
-    font-size: 2.3rem;
-    margin-bottom: 10px;
-}
-
-.section-line {
-    width: 60px;
-    height: 4px;
-    background-color: #c084fc;
-    margin-bottom: 25px;
-    border-radius: 2px;
-}
-
-.page-section p {
-    font-size: 1.1rem;
-    color: #9ca3af;
-    line-height: 1.8;
-}
-
-.download-btn {
-    display: inline-block;
-    padding: 12px 24px;
-    background-color: #c084fc;
-    color: #0c0a12;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 6px;
-    margin-top: 20px;
-}
-
-/* Logik Memapar Halaman Sasaran */
-.page-section:target, 
-.page-section-hero:target {
-    opacity: 1;
-    pointer-events: auto;
-    z-index: 10;
-}
-
-body:not(:has(:target)) #home {
-    opacity: 1;
-    pointer-events: auto;
-    z-index: 5;
-}
-
-
-/* ==========================================================================
-   2. REKA BENTUK RESPONSIF: PILIHAN B (FULL-WIDTH CLEAN CARDS)
-   ========================================================================== */
-@media (max-width: 768px) {
-    body {
-        flex-direction: column !important;
-        overflow: hidden !important; /* Kekalkan penguncian skrol luar pada phone */
-        height: 100vh !important;
-    }
-
-    /* --- Blok Profil Atas --- */
-    .sidebar {
-        width: 100% !important;
-        height: auto !important;
-        padding: 30px 20px 15px 20px !important;
-        border-right: none !important;
-        border-bottom: 1px solid #1e172e !important;
-        background-color: #120e1e !important;
-        z-index: 150;
-    }
-
-    .profile-img-container {
-        width: 110px !important;
-        height: 110px !important;
-        border: 3px solid #32274a !important;
-        margin-bottom: 12px !important;
-    }
-
-    .sidebar-profile h2 {
-        font-size: 1.35rem !important;
-        font-weight: bold !important;
-    }
-
-    .social-icons {
-        margin-top: 10px !important;
-        margin-bottom: 20px !important;
-        gap: 15px !important;
-    }
-
-    .social-icons a {
-        background-color: #1e172e !important;
-        width: 38px !important;
-        height: 38px !important;
-    }
-
-    /* Sembunyikan tulisan footer pada telefon */
-    .sidebar-footer {
-        display: none !important;
-    }
-
-    /* --- GAYA MENU: KAD MEMANJANG PENUH (FULL-WIDTH CARDS) --- */
-    .nav-menu {
-        width: 100% !important;
-        max-width: 450px !important; /* Had lebar kontena menu kad */
-        padding: 0 5px !important;
-    }
-
-    .nav-menu ul {
-        display: flex !important;
-        flex-direction: column !important; /* Susun kad secara menegak ke bawah */
-        gap: 8px !important; /* Jarak antara kad menu */
-    }
-
-    .nav-menu ul li {
-        margin-bottom: 0 !important;
-        width: 100% !important;
-    }
-
-    /* Reka bentuk struktur fizikal Kad Menu */
-    .nav-menu ul li a {
-        display: flex !important;
-        flex-direction: row !important; /* Letak ikon di kiri, teks di kanan */
-        align-items: center !important;
-        justify-content: flex-start !important; /* Rapatkan kandungan ke kiri kad */
-        padding: 12px 20px !important; /* Ruang dalam kad yang luas untuk disentuh jari */
-        background-color: #1a1429 !important; /* Warna asas kad gelap */
-        color: #a3a3a3 !important;
-        border-radius: 12px !important; /* Sudut bucu kad membulat dengan kemas */
-        border: 1px solid #251d3a !important;
-        font-size: 0.95rem !important;
-        font-weight: 500 !important;
-        transition: all 0.25s ease;
-    }
-
-    .menu-icon {
-        margin-right: 15px !important; /* Jarak antara emoji dan teks nama menu */
-        font-size: 1.1rem !important;
-    }
-
-    /* Gaya visual apabila sesebuah Kad Menu itu sedang aktif/dipilih */
-    .nav-menu ul li.active a {
-        background-color: #241a3c !important; /* Kad bertukar warna ungu pekat */
-        color: #c084fc !important; /* Teks bertukar ungu terang */
-        border: 1px solid #473373 !important; /* Sempadan border bercahaya lembut */
-        box-shadow: 0 4px 15px rgba(192, 132, 252, 0.1) !important; /* Sedikit bayang keemasan/ungu */
-    }
-
-    /* --- Penyelarasan Kandungan Bawah Skrin Phone --- */
-    .content-container {
-        width: 100% !important;
-        /* Mengira ruang paparan seksyen bawah selepas ditolak ketinggian profil & kad menu atas */
-        height: calc(100vh - 435px) !important; 
-    }
-
-    .page-section, 
-    .page-section-hero {
-        height: 100% !important;
-        padding: 30px 20px !important;
-    }
-
-    /* Sembunyikan teks nama bertindih dalam seksyen home di phone */
-    .page-section-hero .hero-text h1 {
-        display: none !important;
-    }
-
-    .page-section-hero .hero-text p {
-        font-size: 1.05rem !important;
-        line-height: 1.6;
-    }
-
-    .page-section h2 {
-        font-size: 1.6rem !important;
-    }
-
-    .page-section p {
-        font-size: 0.95rem !important;
-    }
-}
+    <script>
+        function kemaskiniMenuAktif() {
+            const hash = window.location.hash || '#home';
+            document.querySelectorAll('.nav-menu ul li').forEach(li => {
+                const link = li.querySelector('a');
+                if (link && link.getAttribute('href') === hash) {
+                    li.classList.add('active');
+                } else {
+                    li.classList.remove('active');
+                }
+            });
+        }
+        window.addEventListener('hashchange', kemaskiniMenuAktif);
+        window.addEventListener('load', kemaskiniMenuAktif);
+    </script>
+</body>
+</html>
