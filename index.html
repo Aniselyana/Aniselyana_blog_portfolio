@@ -1,63 +1,135 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ms">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aniselyana | Personal Blog Portfolio</title>
+    <title>Portfolio Nurul Anis Elyana</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <h1>Selamat Datang ke Blog Portfolio Saya</h1>
-        <nav>
-            <a href="index.html">Utama</a> | 
-            <a href="about.html">Mengenai Saya</a> | 
-            <a href="blog.html">Blog</a> | 
-            <a href="contact.html">Hubungi</a>
-        </nav>
-    </header>
-
-    <main>
-    <section>
-        <h2>Hi, Saya Anis Elyana! 👋</h2>
-        <p>Selamat datang ke laman web portfolio peribadi saya. Saya merupakan seorang pelajar Teknologi Maklumat (Pembangunan Perisian) yang meminati bidang pembangunan web dan aplikasi interaktif.</p>
-        <p>Laman web ini dibangunkan khas untuk memenuhi tugasan individu subjek <strong>CSD 34203: Special Topics in Software Development</strong>.</p>
-    </section>
-</main>
-
-    <footer>
-        <p>&copy; 2026 Aniselyana. Hak Cipta Terpelihara.</p>
-    </footer>
-    <script>
-        // Fungsi interaktif untuk Dark Mode / Light Mode
-        const modeButton = document.createElement('button');
-        modeButton.innerText = '🌙 Tukar Tema';
-        modeButton.style.position = 'fixed';
-        modeButton.style.bottom = '20px';
-        modeButton.style.right = '20px';
-        modeButton.style.padding = '10px 15px';
-        modeButton.style.backgroundColor = '#2c3e50';
-        modeButton.style.color = '#fff';
-        modeButton.style.border = 'none';
-        modeButton.style.borderRadius = '20px';
-        modeButton.style.cursor = 'pointer';
-        modeButton.style.fontWeight = 'bold';
+    <!-- SIDEBAR (Bahagian Kiri) -->
+    <aside class="sidebar">
+        <div class="sidebar-profile">
+            <!-- Gantikan src dengan gambar profil anda -->
+            <img src="profile.jpg" alt="Nurul Anis Elyana" class="profile-img">
+            <h2>Nurul Anis Elyana Binti Sahiron</h2>
+        </div>
         
-        document.body.appendChild(modeButton);
+        <!-- Ikon Media Sosial -->
+        <div class="social-icons">
+            <a href="#" class="icon">in</a>
+            <a href="#" class="icon">ig</a>
+            <a href="#" class="icon">fb</a>
+            <a href="#" class="icon">✉</a>
+        </div>
 
-        modeButton.addEventListener('click', () => {
-            if (document.body.style.backgroundColor === 'rgb(44, 62, 80)') {
-                document.body.style.backgroundColor = '#f7f5f0';
-                document.body.style.color = '#333333';
-                modeButton.innerText = '🌙 Tukar Tema';
-            } else {
-                document.body.style.backgroundColor = '#2c3e50';
-                document.body.style.color = '#ffffff';
-                modeButton.innerText = '☀️ Tukar Tema';
+        <!-- Menu Navigasi -->
+        <nav class="nav-menu">
+            <ul>
+                <li class="active"><a href="#home"><span class="menu-icon">🏠</span> Home</a></li>
+                <li><a href="#about"><span class="menu-icon">👤</span> About Me</a></li>
+                <li><a href="#resume"><span class="menu-icon">📄</span> Resume</a></li>
+                <li><a href="#articles"><span class="menu-icon">📑</span> Articles</a></li>
+                <li><a href="#contact"><span class="menu-icon">✉</span> Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Hak Cipta di Bawah Sidebar -->
+        <div class="sidebar-footer">
+            <p>© 2026 AnisMedia.<br>Built for CSD34203.</p>
+        </div>
+    </aside>
+        
+        <!-- KONTENA KANDUNGAN UTAMA (Bahagian Kanan) -->
+    <div class="content-container">
+        
+        <!-- SECTION 1: HOME -->
+        <main class="main-content" id="home">
+            <div class="hero-overlay"></div>
+            <div class="hero-text">
+                <h1>Nurul Anis Elyana Binti Sahiron</h1>
+                <p>I am a final-year student majoring in <span class="highlight">Informatics Media</span> at UniSZA.</p>
+                <div class="scroll-down">
+                    <p>Scroll Down to View Portfolio</p>
+                    <div class="arrow-down">▼</div>
+                </div>
+            </div>
+        </main>
+
+        <!-- SECTION 2: ABOUT ME -->
+        <section class="page-section" id="about">
+            <h2>About Me</h2>
+            <div class="section-line"></div>
+            <p>
+                Saya merupakan pelajar tahun akhir dalam bidang <strong>Ijazah Sarjana Muda Teknologi Maklumat (Media Informatika)</strong> di UniSZA. 
+                Fokus utama saya adalah dalam pembangunan aplikasi pendidikan berasaskan teknologi moden seperti *Augmented Reality* (AR) serta penciptaan kandungan digital yang kreatif dan membawa impak sosial. 
+                Saya gemar menggabungkan elemen interaktif untuk memudahkan proses pembelajaran serta mempromosikan kesejahteraan digital dalam masyarakat.
+            </p>
+        </section>
+
+        <!-- SECTION 3: RESUME -->
+        <section class="page-section" id="resume">
+            <h2>Resume</h2>
+            <div class="section-line"></div>
+            <p>Berikut adalah ringkasan latar belakang akademik dan kemahiran saya:</p>
+            <br>
+            <p><strong>Pendidikan:</strong></p>
+            <p>• Ijazah Sarjana Muda Teknologi Maklumat (Media Informatika) dengan Kepujian, UniSZA</p>
+            <br>
+            <p><strong>Kemahiran Teknikal:</strong></p>
+            <p>• Pembangunan AR (Unity & Vuforia Engine)</p>
+            <p>• Reka Bentuk Grafik & Ilustrasi (Flat Vector Style, UI/UX Design)</p>
+            <p>• Produksi Video & Penulisan Skrip</p>
+            <br>
+            <a href="resume_anda.pdf" download class="download-btn" style="display: inline-block; padding: 10px 20px; background-color: #c084fc; color: #0c0a12; text-decoration: none; font-weight: bold; border-radius: 5px; margin-top: 15px;">Download CV (PDF)</a>
+        </section>
+
+        <!-- SECTION 4: ARTICLES / PROJECTS -->
+        <section class="page-section" id="articles">
+            <h2>Articles & Projects</h2>
+            <div class="section-line"></div>
+            <p>Senarai projek akademik bagi kod kursus <strong>CSD34203</strong> dan projek media kreatif yang telah saya bangunkan:</p>
+            <br>
+            <ul style="list-style: none; color: #9ca3af; line-height: 2;">
+                <li>🚀 <strong>AR ISYARATKU Application:</strong> Aplikasi pembelajaran interaktif Bahasa Isyarat Malaysia (BIM) menggunakan teknologi Augmented Reality (AR) dan integrasi model 3D gerak isyarat tangan.</li>
+                <li>📅 <strong>RM SEHARI Digital Savings Calendar:</strong> Reka bentuk kalendar simpanan digital bertema minimalis untuk pengurusan kewangan harian rakyat Malaysia.</li>
+                <li>🎬 <strong>"The Comment Section" - Cyberbullying Awareness Video:</strong> Video kesedaran digital yang memfokuskan kepada impak psikologi akibat buli siber demi memupuk empati dalam komuniti dalam talian.</li>
+                <li>🎮 <strong>Quest Forest: The Lost Totem:</strong> Pembangunan identiti visual dan reka bentuk logo untuk projek permainan mini kreatif.</li>
+            </ul>
+        </section>
+
+        <!-- SECTION 5: CONTACT -->
+        <section class="page-section" id="contact">
+            <h2>Contact Me</h2>
+            <div class="section-line"></div>
+            <p>Jika anda mempunyai sebarang pertanyaan atau ingin berkolaborasi, sila hubungi saya melalui emel rasmi di bawah:</p>
+            <p style="margin-top: 15px;">📧 Emel: <a href="mailto:aniselyana@example.com" style="color: #c084fc; text-decoration: none; font-weight: bold;">aniselyana@example.com</a></p>
+        </section>
+
+    </div>
+    <script>
+    const sections = document.querySelectorAll('.page-section, .main-content');
+    const navLi = document.querySelectorAll('.nav-menu ul li');
+
+    document.querySelector('.content-container').addEventListener('scroll', () => {
+        let current = '';
+        const containerTop = document.querySelector('.content-container').getBoundingClientRect().top;
+
+        sections.forEach(section => {
+            const sectionTop = section.getBoundingClientRect().top - containerTop;
+            if (sectionTop <= 150) {
+                current = section.getAttribute('id');
             }
         });
-    </script>
 
+        navLi.forEach(li => {
+            li.classList.remove('active');
+            if (li.querySelector('a').getAttribute('href').includes(current)) {
+                li.classList.add('active');
+            }
+        });
+    });
+</script>
 </body>
 </html>

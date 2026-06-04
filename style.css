@@ -1,202 +1,238 @@
-/* --- TEMA & GAYA UMUM --- */
+/* Tetapan Asas */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', 'Segoe UI', system-ui, -apple-system, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-    background: #f7f5fa; /* Latar belakang cerah dengan sedikit tona ungu lembut */
-    color: #2c1a4d; /* Warna teks gelap berasaskan ungu */
     display: flex;
-    min-height: 100vh;
-    transition: background-color 0.4s ease, color 0.4s ease;
+    background-color: #0c0a12; /* Latar belakang hitam dengan tona ungu gelap */
+    color: #ffffff;
+    height: 100vh;
+    overflow: hidden;
 }
 
-/* --- SIDEBAR PREMIUM UNGU (MENU KIRI) --- */
-header {
-    width: 280px;
-    background: linear-gradient(135deg, #2d132c, #4a1c40); /* Gradien ungu gelap diraja yang eksklusif */
-    color: #ffffff;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    padding: 50px 25px;
+/* --- bahagian sidebar --- */
+.sidebar {
+    width: 260px;
+    background-color: #120e1e; /* Warna ungu-gelap pekat untuk sidebar */
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 4px 0 15px rgba(74, 28, 64, 0.15);
-    z-index: 100;
+    padding: 30px 15px;
+    border-right: 1px solid #231b36;
+    z-index: 10;
 }
 
-/* Avatar Bulatan Profil Bertukar Warna (Glow Ungu/Pink) */
-header::before {
-    content: "AE";
-    width: 90px;
-    height: 90px;
-    background: linear-gradient(135deg, #9b59b6, #8e44ad); /* Ungu Violet */
-    color: white;
+.sidebar-profile {
+    text-align: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.profile-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #a855f7; /* Bingkai warna ungu terang */
+    margin-bottom: 15px;
+}
+
+.sidebar-profile h2 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+    line-height: 1.3;
+    padding: 0 5px;
+}
+
+/* Ikon Sosial */
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.social-icons .icon {
+    width: 30px;
+    height: 30px;
+    background-color: #231b36;
     border-radius: 50%;
     display: flex;
-    align-items: center;
     justify-content: center;
-    font-size: 32px;
-    font-weight: 700;
-    margin-bottom: 25px;
-    box-shadow: 0 4px 15px rgba(155, 89, 182, 0.4);
-    border: 3px solid rgba(255, 255, 255, 0.1);
-}
-
-header h1 {
-    font-size: 22px;
-    font-weight: 600;
-    margin-bottom: 40px;
-    text-align: center;
-    letter-spacing: 1px;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
-}
-
-header nav {
-    width: 100%;
-}
-
-header nav ul {
-    list-style: none;
-    width: 100%;
-}
-
-header nav ul li {
-    margin-bottom: 12px;
-}
-
-/* Butang Menu Navigasi dengan Animasi Hover Ungu */
-header nav ul li a {
-    color: #e2d5f3;
+    align-items: center;
+    color: #d8b4fe;
     text-decoration: none;
-    font-size: 15px;
-    display: block;
-    padding: 14px 20px;
-    border-radius: 10px;
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    font-size: 0.85rem;
+    transition: 0.3s;
+}
+
+.social-icons .icon:hover {
+    background-color: #a855f7;
+    color: #fff;
+}
+
+/* Menu Navigasi */
+.nav-menu {
+    width: 100%;
+    flex-grow: 1;
+}
+
+.nav-menu ul {
+    list-style: none;
+}
+
+.nav-menu ul li {
+    margin-bottom: 10px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.nav-menu ul li a {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    color: #9ca3af;
+    text-decoration: none;
+    font-size: 0.9rem;
     font-weight: 500;
-    border-left: 4px solid transparent;
 }
 
-header nav ul li a:hover {
-    background-color: rgba(155, 89, 182, 0.2);
-    color: #d6a2e8;
-    padding-left: 28px;
-    border-left: 4px solid #9b59b6;
-    font-weight: 600;
+.nav-menu ul li.active, .nav-menu ul li:hover {
+    background-color: #231b36;
 }
 
-/* --- KANDUNGAN UTAMA (SEBELAH KANAN) --- */
-main {
-    margin-left: 280px;
-    padding: 80px 60px;
-    width: calc(100% - 280px);
+.nav-menu ul li.active a, .nav-menu ul li:hover a {
+    color: #c084fc;
 }
 
-/* Kad Kandungan Moden (Floating Card Box) */
-main > * {
-    background: #ffffff;
-    padding: 45px;
-    border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(74, 28, 64, 0.03);
-    margin-bottom: 40px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.menu-icon {
+    margin-right: 15px;
+    font-size: 1rem;
 }
 
-/* Kesan Kad Terapung */
-main > *:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(155, 89, 182, 0.1);
+/* Footer Sidebar */
+.sidebar-footer {
+    text-align: center;
+    font-size: 0.7rem;
+    color: #6b7280;
+    line-height: 1.4;
 }
 
-h2 {
-    font-size: 32px;
-    color: #4a1c40;
-    margin-bottom: 25px;
-    font-weight: 700;
+/* --- bahagian susun atur kandungan kanan --- */
+.content-container {
+    flex-grow: 1;
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-behavior: smooth; /* Kesan skrol yang lancar (smooth) */
+}
+
+/* --- bahagian main-content (Home) --- */
+.main-content {
+    height: 100vh;
+    width: 100%;
     position: relative;
-    display: inline-block;
+    background: url('background.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* Garisan Hiasan Bawah Tajuk h2 Warna Ungu */
-h2::after {
-    content: '';
+/* Lapisan Gelap di Atas Gambar (Overlay) dengan Tona Ungu Gelap */
+.hero-overlay {
     position: absolute;
-    bottom: -8px;
+    top: 0;
     left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(18, 12, 28, 0.8);
+    z-index: 1;
+}
+
+/* Teks Utama */
+.hero-text {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    color: #e5e7eb;
+}
+
+/* Highlight Teks Utama */
+.highlight {
+    color: #c084fc;
+    border-bottom: 1.5px solid #c084fc;
+    padding-bottom: 2px;
+}
+
+/* Bahagian Tatal ke Bawah (Scroll Down) */
+.scroll-down {
+    margin-top: 100px;
+    font-size: 0.9rem;
+    color: #9ca3af;
+    letter-spacing: 1px;
+}
+
+.arrow-down {
+    margin-top: 10px;
+    color: #c084fc;
+    animation: bounce 2s infinite;
+}
+
+/* --- gaya untuk seksyen baru (About, Resume, dll.) --- */
+.page-section {
+    padding: 80px 50px;
+    background-color: #0c0a12;
+    min-height: 100vh;
+    border-bottom: 1px solid #231b36;
+}
+
+.page-section h2 {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+/* Garis hiasan di bawah tajuk seksyen */
+.section-line {
     width: 50px;
     height: 4px;
-    background: #9b59b6;
+    background-color: #c084fc;
+    margin-bottom: 30px;
     border-radius: 2px;
 }
 
-p {
-    font-size: 16px;
+.page-section p {
+    font-size: 1.1rem;
+    color: #9ca3af;
     line-height: 1.8;
-    color: #5c4a78;
-    margin-top: 15px;
+    max-width: 800px;
 }
 
-/* --- BAHAGIAN FOOTER --- */
-footer {
-    margin-left: 280px;
-    padding: 30px 60px;
-    text-align: center;
-    font-size: 14px;
-    color: #b3a2ca;
-    width: calc(100% - 280px);
-}
-
-/* --- REKABENTUK RESPONSIVE (UNTUK SMARTPHONE) --- */
-@media (max-width: 768px) {
-    body {
-        flex-direction: column;
+/* Animasi anak panah */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
     }
-    
-    header {
-        width: 100%;
-        position: relative;
-        padding: 30px 20px;
+    40% {
+        transform: translateY(-8px);
     }
-    
-    header::before {
-        display: none;
-    }
-    
-    header h1 {
-        margin-bottom: 20px;
-    }
-    
-    header nav ul {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 8px;
-    }
-    
-    header nav ul li {
-        margin-bottom: 0;
-    }
-    
-    header nav ul li a {
-        padding: 10px 15px;
-        font-size: 14px;
-    }
-    
-    header nav ul li a:hover {
-        padding-left: 15px;
-        border-left: 4px solid transparent;
-    }
-    
-    main, footer {
-        margin-left: 0;
-        width: 100%;
-        padding: 40px 20px;
+    60% {
+        transform: translateY(-4px);
     }
 }
