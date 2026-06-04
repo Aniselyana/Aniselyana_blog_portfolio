@@ -1,5 +1,5 @@
 /* ==========================================================================
-   1. TETAPAN STRUKTUR ASAS & DESKTOP (SIDEBAR KIRI)
+   1. TETAPAN DESKTOP (SIDEBAR SISI KIRI)
    ========================================================================== */
 * {
     margin: 0;
@@ -13,10 +13,9 @@ body {
     background-color: #0c0a12;
     color: #ffffff;
     height: 100vh;
-    overflow: hidden; /* Menghalang skrol luar pada seluruh struktur web */
+    overflow: hidden; /* Mengunci keseluruhan skrol rawak */
 }
 
-/* --- Susun Atur Kedudukan Sidebar --- */
 .sidebar {
     width: 260px;
     background-color: #120e1e;
@@ -61,7 +60,6 @@ body {
     line-height: 1.4;
 }
 
-/* Ikon Sosial Media */
 .social-icons {
     display: flex;
     gap: 12px;
@@ -87,7 +85,6 @@ body {
     background-color: #c084fc;
 }
 
-/* Navigasi Menu */
 .nav-menu {
     width: 100%;
     flex-grow: 1;
@@ -131,17 +128,14 @@ body {
     line-height: 1.5;
 }
 
-/* ==========================================================================
-   2. SISTEM PENGUNCI SKROL & ANIMASI FADE-IN (FULL PAGE SECTIONS)
-   ========================================================================== */
+/* --- Pengurusan Halaman Kandungan Kanan --- */
 .content-container {
     flex-grow: 1;
     height: 100vh;
     position: relative;
-    overflow: hidden; /* Kunci skrol kontena utama secara total */
+    overflow: hidden;
 }
 
-/* Semua halaman dikunci setempat dan disorokkan secara lalai (Default) */
 .page-section, 
 .page-section-hero {
     position: absolute;
@@ -151,14 +145,13 @@ body {
     height: 100vh;
     padding: 80px 50px;
     background-color: #0c0a12;
-    opacity: 0; /* Sorok */
-    pointer-events: none; /* Matikan klik */
-    transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1); /* Animasi tukar halaman */
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease-in-out;
     z-index: 1;
-    overflow-y: auto; /* Membenarkan skrol dalaman hanya jika teks melebihi saiz skrin */
+    overflow-y: auto; /* Membenarkan skrol dalaman jika teks melebihi saiz skrin */
 }
 
-/* Reka bentuk khusus untuk halaman utama (Home) */
 .page-section-hero {
     background: url('images/background.jpg') no-repeat center center/cover;
     display: flex;
@@ -198,7 +191,6 @@ body {
     color: #c084fc;
 }
 
-/* Gaya Elemen Tajuk Halaman */
 .page-section h2 {
     font-size: 2.3rem;
     margin-bottom: 10px;
@@ -229,7 +221,7 @@ body {
     margin-top: 20px;
 }
 
-/* LOGIK UTAMA: Hanya paparkan halaman yang dipanggil (Aktif) melalui url #ID */
+/* Logik Memapar Halaman Sasaran */
 .page-section:target, 
 .page-section-hero:target {
     opacity: 1;
@@ -237,7 +229,6 @@ body {
     z-index: 10;
 }
 
-/* Paparkan halaman #home sebagai paparan pertama sewaktu mula-mula buka url asal */
 body:not(:has(:target)) #home {
     opacity: 1;
     pointer-events: auto;
@@ -246,42 +237,40 @@ body:not(:has(:target)) #home {
 
 
 /* ==========================================================================
-   3. PAPARAN TELEFON PINTAR (TIRU LAYOUT GRID ATAS KAWAN ANDA)
+   2. REKA BENTUK RESPONSIF: PILIHAN B (FULL-WIDTH CLEAN CARDS)
    ========================================================================== */
 @media (max-width: 768px) {
     body {
         flex-direction: column !important;
-        overflow: hidden !important; /* Kekalkan sekatan skrol luar di telefon */
+        overflow: hidden !important; /* Kekalkan penguncian skrol luar pada phone */
         height: 100vh !important;
     }
 
-    /* Susun Blok Profil Atas secara Statik */
+    /* --- Blok Profil Atas --- */
     .sidebar {
         width: 100% !important;
         height: auto !important;
-        padding: 30px 20px 20px 20px !important;
+        padding: 30px 20px 15px 20px !important;
         border-right: none !important;
-        border-bottom: 2px solid #1e172e !important;
+        border-bottom: 1px solid #1e172e !important;
         background-color: #120e1e !important;
-        z-index: 200;
+        z-index: 150;
     }
 
     .profile-img-container {
-        width: 120px !important;
-        height: 120px !important;
-        border: 4px solid #32274a !important;
-        margin-bottom: 15px !important;
+        width: 110px !important;
+        height: 110px !important;
+        border: 3px solid #32274a !important;
+        margin-bottom: 12px !important;
     }
 
     .sidebar-profile h2 {
-        font-size: 1.4rem !important;
+        font-size: 1.35rem !important;
         font-weight: bold !important;
-        max-width: 95%;
-        margin: 0 auto !important;
     }
 
     .social-icons {
-        margin-top: 12px !important;
+        margin-top: 10px !important;
         margin-bottom: 20px !important;
         gap: 15px !important;
     }
@@ -292,77 +281,86 @@ body:not(:has(:target)) #home {
         height: 38px !important;
     }
 
-    /* Sistem Susunan Butang Grid 2-Sebaris */
-    .nav-menu {
-        width: 100% !important;
-        max-width: 340px !important;
-    }
-
-    .nav-menu ul {
-        display: grid !important;
-        grid-template-columns: repeat(2, 1fr) !important;
-        gap: 10px !important;
-    }
-
-    /* Tetapan Khas Butang Contact Ke Baris Bawah Tengah */
-    .nav-menu ul li:nth-child(5) {
-        grid-column: span 2 !important;
-        justify-self: center !important;
-        width: 50% !important;
-    }
-
-    .nav-menu ul li a {
-        justify-content: center !important;
-        padding: 10px 8px !important;
-        background-color: #1a1429 !important;
-        color: #9ca3af !important;
-        font-size: 0.85rem !important;
-        border: 1px solid transparent !important;
-    }
-
-    .nav-menu ul li.active a {
-        background-color: #2a1f42 !important;
-        color: #c084fc !important;
-        border: 1px solid #4c3775 !important;
-    }
-
-    .menu-icon {
-        margin-right: 6px !important;
-        font-size: 0.95rem !important;
-    }
-
-    /* Sembunyikan bahagian footer hak cipta agar skrin telefon kekal luas */
+    /* Sembunyikan tulisan footer pada telefon */
     .sidebar-footer {
         display: none !important;
     }
 
-    /* Penyelarasan Ruang Kandungan Bawah Telefon Pintar */
+    /* --- GAYA MENU: KAD MEMANJANG PENUH (FULL-WIDTH CARDS) --- */
+    .nav-menu {
+        width: 100% !important;
+        max-width: 450px !important; /* Had lebar kontena menu kad */
+        padding: 0 5px !important;
+    }
+
+    .nav-menu ul {
+        display: flex !important;
+        flex-direction: column !important; /* Susun kad secara menegak ke bawah */
+        gap: 8px !important; /* Jarak antara kad menu */
+    }
+
+    .nav-menu ul li {
+        margin-bottom: 0 !important;
+        width: 100% !important;
+    }
+
+    /* Reka bentuk struktur fizikal Kad Menu */
+    .nav-menu ul li a {
+        display: flex !important;
+        flex-direction: row !important; /* Letak ikon di kiri, teks di kanan */
+        align-items: center !important;
+        justify-content: flex-start !important; /* Rapatkan kandungan ke kiri kad */
+        padding: 12px 20px !important; /* Ruang dalam kad yang luas untuk disentuh jari */
+        background-color: #1a1429 !important; /* Warna asas kad gelap */
+        color: #a3a3a3 !important;
+        border-radius: 12px !important; /* Sudut bucu kad membulat dengan kemas */
+        border: 1px solid #251d3a !important;
+        font-size: 0.95rem !important;
+        font-weight: 500 !important;
+        transition: all 0.25s ease;
+    }
+
+    .menu-icon {
+        margin-right: 15px !important; /* Jarak antara emoji dan teks nama menu */
+        font-size: 1.1rem !important;
+    }
+
+    /* Gaya visual apabila sesebuah Kad Menu itu sedang aktif/dipilih */
+    .nav-menu ul li.active a {
+        background-color: #241a3c !important; /* Kad bertukar warna ungu pekat */
+        color: #c084fc !important; /* Teks bertukar ungu terang */
+        border: 1px solid #473373 !important; /* Sempadan border bercahaya lembut */
+        box-shadow: 0 4px 15px rgba(192, 132, 252, 0.1) !important; /* Sedikit bayang keemasan/ungu */
+    }
+
+    /* --- Penyelarasan Kandungan Bawah Skrin Phone --- */
     .content-container {
         width: 100% !important;
-        height: calc(100vh - 310px) !important; /* Ambil baki saiz skrin bawah selepas ditolak bar menu atas */
+        /* Mengira ruang paparan seksyen bawah selepas ditolak ketinggian profil & kad menu atas */
+        height: calc(100vh - 435px) !important; 
     }
 
     .page-section, 
     .page-section-hero {
         height: 100% !important;
-        padding: 35px 20px !important;
+        padding: 30px 20px !important;
     }
 
-    /* Sembunyikan nama bertindih pada bahagian hero teks skrin telefon */
+    /* Sembunyikan teks nama bertindih dalam seksyen home di phone */
     .page-section-hero .hero-text h1 {
         display: none !important;
     }
 
     .page-section-hero .hero-text p {
         font-size: 1.05rem !important;
-        line-height: 1.5;
+        line-height: 1.6;
     }
 
     .page-section h2 {
         font-size: 1.6rem !important;
     }
-    
+
     .page-section p {
-        font-size: 1rem !important;
+        font-size: 0.95rem !important;
     }
 }

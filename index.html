@@ -4,18 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Nurul Anis Elyana</title>
-    <!-- Parameter ?v=6.0 dipasang bagi mengelakkan masalah cache pada GitHub Pages -->
-    <link rel="stylesheet" href="style.css?v=6.0">
-    <!-- Pautan Font Awesome untuk sokongan ikon sosial media -->
+    <!-- Parameter versi v=8.0 dipasang bagi mengelakkan isu fail CSS lama tersimpan dalam cache phone -->
+    <link rel="stylesheet" href="style.css?v=8.0">
+    <!-- Pautan ikon sosial media Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <!-- BAHAGIAN PROFIL & MENU (Sidebar Desktop / Bar Atas Telefon) -->
+    <!-- BLOK PROFIL & NAVIGASI KAD (Sidebar Desktop / Bar Menu Menegak di Telefon) -->
     <aside class="sidebar">
         <div class="sidebar-profile">
             <div class="profile-img-container">
-                <!-- Sila pastikan imej bernama 'profile.jpg' berada dalam folder yang sama -->
                 <img src="profile.jpg" alt="Anis" class="profile-img" onerror="this.style.display='none';">
             </div>
             <h2>Nurul Anis Elyana Binti Sahiron</h2>
@@ -28,9 +27,9 @@
             <a href="mailto:anisn3823@gmail.com"><i class="fas fa-envelope"></i></a>
         </div>
 
+        <!-- NAV MENU: Di telefon, ia akan berubah menjadi barisan kad memanjang -->
         <nav class="nav-menu">
             <ul>
-                <!-- Pautan anchor berpautan terus dengan ID setiap seksyen -->
                 <li class="menu-item-home"><a href="#home"><span class="menu-icon">🏠</span><span class="menu-text">Home</span></a></li>
                 <li><a href="#about"><span class="menu-icon">👤</span><span class="menu-text">About Me</span></a></li>
                 <li><a href="#resume"><span class="menu-icon">📄</span><span class="menu-text">Resume</span></a></li>
@@ -44,7 +43,7 @@
         </div>
     </aside>
         
-    <!-- KONTENA KANDUNGAN UTAMA (Kunci Skrol Bebas) -->
+    <!-- KONTENA UTAMA (KANDUNGAN SEKSYEN SATU SKRIN) -->
     <div class="content-container">
         
         <!-- SEKSYEN 1: HOME -->
@@ -76,8 +75,8 @@
             <p>• Ijazah Sarjana Muda Teknologi Maklumat (Media Informatika) dengan Kepujian, UniSZA</p>
             <br>
             <p><strong>Kepakaran Utama:</strong></p>
-            <p>• Unity & Vuforia Engine (Pembangunan AR)</p>
-            <p>• Reka Bentuk Grafik Berasaskan Flat Vector Style</p>
+            <p>• Pembangunan AR (Unity & Vuforia Engine)</p>
+            <p>• Reka Bentuk Grafik & UI/UX (Flat Vector Style)</p>
             <br>
             <a href="#" class="download-btn">Download CV (PDF)</a>
         </section>
@@ -104,7 +103,7 @@
 
     </div>
 
-    <!-- JAVASCRIPT RINGKAS UNTUK MENUNJUKKAN STATUS AKTIF PADA BUTANG MENU -->
+    <!-- PENGURUSAN STATUS KAD MENU AKTIF -->
     <script>
         function kemaskiniMenuAktif() {
             const hash = window.location.hash || '#home';
