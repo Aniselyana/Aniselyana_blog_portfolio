@@ -1,4 +1,4 @@
-/* Tetapan Asas & Tipografi */
+/* --- TEMA & RESETS --- */
 * {
     margin: 0;
     padding: 0;
@@ -7,95 +7,125 @@
 }
 
 body {
-    background-color: #f7f5f0; /* Warna latar belakang lembut/earthy */
-    color: #333333;
-    line-height: 1.6;
+    background-color: #f4f1ea; /* Warna latar belakang beige bumi yang sangat tenang */
+    color: #4a3e3d; /* Warna teks coklat gelap (bukan hitam pekat supaya nampak lembut) */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px 20px;
 }
 
-/* Bahagian Atas (Header & Navigasi) */
+/* --- KEPALA HALAMAN (HEADER) --- */
 header {
-    background-color: #2c3e50; /* Warna korporat/profesional */
-    color: #ffffff;
-    padding: 20px;
+    width: 100%;
+    max-width: 900px;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
     text-align: center;
+    margin-bottom: 30px;
 }
 
 header h1 {
-    margin-bottom: 10px;
-    font-size: 24px;
+    font-size: 26px;
+    color: #5c4d4d; /* Coklat premium */
+    margin-bottom: 15px;
+    letter-spacing: 0.5px;
 }
 
-nav a {
-    color: #ffffff;
+/* Menu Navigasi Gaya Minimalis Ring */
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+header nav ul li a {
+    color: #7a6b68;
     text-decoration: none;
-    font-weight: bold;
-    margin: 0 10px;
-    transition: color 0.3s;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    background-color: #fcfbfa;
+    border: 1px solid #eae6df;
 }
 
-nav a:hover {
-    color: #1abc9c; /* Warna berubah bila tetikus lalu */
+/* Kesan Hover Menu */
+header nav ul li a:hover {
+    background-color: #d9c3b0; /* Warna coklat susu lembut */
+    color: #ffffff;
+    border-color: #d9c3b0;
 }
 
-/* Kandungan Utama (Main) */
+/* --- KANDUNGAN UTAMA (MAIN) --- */
 main {
-    max-width: 800px;
-    margin: 30px auto;
-    padding: 20px;
+    width: 100%;
+    max-width: 900px;
+    flex: 1;
+}
+
+/* Gaya Kotak Kad (Card Display) */
+main section, main div {
     background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    border-top: 6px solid #d9c3b0; /* Hiasan garis atas bertema kayu/tanah */
+    margin-bottom: 30px;
 }
 
-main h2 {
-    color: #2c3e50;
+h2 {
+    font-size: 22px;
+    color: #5c4d4d;
     margin-bottom: 15px;
-    border-bottom: 2px solid #1abc9c;
-    padding-bottom: 5px;
+    position: relative;
+    display: inline-block;
 }
 
-main p {
-    margin-bottom: 15px;
+p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #6e5d5b;
 }
 
-/* Gaya untuk Halaman Blog (Artikel) */
-article {
-    background-color: #f9f9f9;
-    padding: 15px;
-    margin-bottom: 20px;
-    border-left: 5px solid #2c3e50;
-    border-radius: 4px;
-}
-
-article h3 {
-    color: #1abc9c;
-    margin-bottom: 5px;
-}
-
-/* Senarai (List) */
-ul {
-    margin-left: 20px;
-    margin-bottom: 15px;
-}
-
-/* Bahagian Bawah (Footer) */
+/* --- KAKI HALAMAN (FOOTER) --- */
 footer {
+    width: 100%;
+    max-width: 900px;
     text-align: center;
     padding: 20px;
-    margin-top: 40px;
-    font-size: 14px;
-    color: #7f8c8d;
+    font-size: 13px;
+    color: #9c8e8b;
+    border-top: 1px solid #eae6df;
+    margin-top: 20px;
 }
 
-/* Reka Bentuk Responsif (Mobile Friendly) */
+/* --- RESPONSIVE UNTUK SMARTPHONE --- */
 @media (max-width: 600px) {
-    main {
-        margin: 15px;
-        padding: 15px;
+    body {
+        padding: 20px 10px;
     }
     
-    nav a {
-        display: inline-block;
-        margin: 5px;
+    header {
+        padding: 20px 15px;
+    }
+    
+    header nav ul {
+        gap: 8px;
+    }
+    
+    header nav ul li a {
+        font-size: 13px;
+        padding: 6px 12px;
+    }
+    
+    main section, main div {
+        padding: 25px 20px;
     }
 }
