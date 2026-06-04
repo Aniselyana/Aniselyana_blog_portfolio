@@ -1,5 +1,5 @@
 /* ==========================================================================
-   1. TETAPAN ASAS & DESKTOP STYLE
+   1. UNTUK PAPARAN DESKTOP (SIDEBAR SEBELAH KIRI)
    ========================================================================== */
 * {
     margin: 0;
@@ -10,21 +10,21 @@
 
 body {
     display: flex;
-    background-color: #0c0a12; /* Latar belakang hitam dengan tona ungu gelap */
+    background-color: #0c0a12;
     color: #ffffff;
     height: 100vh;
     overflow: hidden;
 }
 
-/* --- bahagian sidebar --- */
 .sidebar {
     width: 260px;
-    background-color: #120e1e; /* Warna ungu-gelap pekat untuk sidebar */
+    background-color: #120e1e;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 30px 15px;
     border-right: 1px solid #231b36;
+    flex-shrink: 0;
     z-index: 10;
 }
 
@@ -34,43 +34,57 @@ body {
     width: 100%;
 }
 
+.profile-img-container {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    border: 3px solid #c084fc;
+    margin: 0 auto 15px auto;
+    background-color: #231b36;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .profile-img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;          /* Membulatkan gambar */
-    object-fit: cover;           /* Mengelakkan gambar daripada penyek/leper */
-    border: 2px solid #8a2be2;   /* Border ungu halus di keliling gambar */
-    margin-bottom: 10px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .sidebar-profile h2 {
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: 600;
     color: #ffffff;
-    line-height: 1.3;
-    padding: 0 5px;
+    line-height: 1.4;
 }
 
-/* Ikon Sosial */
 .social-icons {
     display: flex;
-    gap: 10px;
-    margin-bottom: 30px;
+    gap: 12px;
+    margin-bottom: 25px;
 }
 
 .social-icons a {
-    color: #bb86fc;              /* Warna ungu pastel supaya lebih terang */
-    font-size: 18px;
-    margin: 0 10px;              /* Memberi jarak antara ikon */
+    color: #9ca3af;
+    background-color: #231b36;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    text-decoration: none;
     transition: all 0.3s ease;
 }
 
 .social-icons a:hover {
-    color: #ffffff;              /* Tukar jadi putih bila hover */
-    text-shadow: 0 0 8px #bb86fc; /* Kesan bercahaya (glow effect) */
+    color: #0c0a12;
+    background-color: #c084fc;
 }
 
-/* Menu Navigasi */
 .nav-menu {
     width: 100%;
     flex-grow: 1;
@@ -81,9 +95,7 @@ body {
 }
 
 .nav-menu ul li {
-    margin-bottom: 10px;
-    border-radius: 5px;
-    transition: 0.3s;
+    margin-bottom: 8px;
 }
 
 .nav-menu ul li a {
@@ -92,43 +104,44 @@ body {
     padding: 12px 15px;
     color: #9ca3af;
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     font-weight: 500;
+    border-radius: 8px;
+    transition: 0.3s;
 }
 
-.nav-menu ul li.active, .nav-menu ul li:hover {
+.nav-menu ul li.active a {
     background-color: #231b36;
+    color: #c084fc;
 }
 
-.nav-menu ul li.active a, .nav-menu ul li:hover a {
-    color: #c084fc;
+.nav-menu ul li:hover a {
+    background-color: #1e172e;
+    color: #ffffff;
 }
 
 .menu-icon {
     margin-right: 15px;
-    font-size: 1rem;
+    font-size: 1.1rem;
 }
 
-/* Footer Sidebar */
 .sidebar-footer {
     text-align: center;
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     color: #6b7280;
-    line-height: 1.4;
+    line-height: 1.5;
 }
 
-/* --- bahagian susun atur kandungan kanan --- */
+/* --- Susun Atur Kandungan --- */
 .content-container {
     flex-grow: 1;
     height: 100vh;
-    overflow-y: scroll;
-    scroll-behavior: smooth; /* Kesan skrol yang lancar (smooth) */
+    overflow-y: auto;
+    scroll-behavior: smooth;
 }
 
-/* --- bahagian main-content (Home) --- */
 .main-content {
     height: 100vh;
-    width: 100%;
     position: relative;
     background: url('images/background.jpg') no-repeat center center/cover;
     display: flex;
@@ -136,18 +149,16 @@ body {
     align-items: center;
 }
 
-/* Lapisan Gelap di Atas Gambar (Overlay) dengan Tona Ungu Gelap */
 .hero-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(18, 12, 28, 0.8);
+    background: rgba(12, 10, 18, 0.85);
     z-index: 1;
 }
 
-/* Teks Utama */
 .hero-text {
     position: relative;
     z-index: 2;
@@ -159,8 +170,6 @@ body {
     font-size: 3rem;
     font-weight: bold;
     margin-bottom: 15px;
-    letter-spacing: 1px;
-    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .hero-text p {
@@ -168,48 +177,38 @@ body {
     color: #e5e7eb;
 }
 
-/* Highlight Teks Utama */
 .highlight {
     color: #c084fc;
-    border-bottom: 1.5px solid #c084fc;
-    padding-bottom: 2px;
 }
 
-/* Bahagian Tatal ke Bawah (Scroll Down) */
 .scroll-down {
-    margin-top: 100px;
+    margin-top: 80px;
     font-size: 0.9rem;
     color: #9ca3af;
-    letter-spacing: 1px;
 }
 
-.arrow-down, .scroll-arrow {
+.arrow-down {
     margin-top: 10px;
     color: #c084fc;
-    display: inline-block;
     animation: bounce 2s infinite;
 }
 
-/* --- gaya untuk seksyen baru (About, Resume, dll.) --- */
 .page-section {
     padding: 80px 50px;
     background-color: #0c0a12;
     min-height: 100vh;
-    border-bottom: 1px solid #231b36;
 }
 
 .page-section h2 {
-    font-size: 2.5rem;
-    color: #ffffff;
+    font-size: 2.3rem;
     margin-bottom: 10px;
 }
 
-/* Garis hiasan di bawah tajuk seksyen */
 .section-line {
-    width: 50px;
+    width: 60px;
     height: 4px;
     background-color: #c084fc;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     border-radius: 2px;
 }
 
@@ -217,119 +216,137 @@ body {
     font-size: 1.1rem;
     color: #9ca3af;
     line-height: 1.8;
-    max-width: 800px;
 }
 
-/* Animasi anak panah (Bounce Effect) */
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0);
-    }
-    40% {
-        transform: translateY(-10px);
-    }
-    60% {
-        transform: translateY(-5px);
-    }
+.download-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #c084fc;
+    color: #0c0a12;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    margin-top: 20px;
 }
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-8px); }
+    60% { transform: translateY(-4px); }
+}
+
 
 /* ==========================================================================
-   2. KOD RESPONSIVE (MOBILE FRIENDLY) - MEDIA QUERY
+   2. UNTUK PAPARAN PHONE (TIRU SEPERTI IMAGE_2FDF84.JPG)
    ========================================================================== */
 @media (max-width: 768px) {
-    /* Mengubah aturan skrin supaya boleh diskrol secara menegak di fon */
     body {
         flex-direction: column !important;
-        overflow-y: auto !important;
+        overflow-y: auto !important; /* Benarkan skrol seluruh halaman */
         height: auto !important;
     }
 
-    /* Menukarkan Sidebar Kiri menjadi Navigasi Atas (Top Navbar) */
+    /* Bahagian Profil Atas */
     .sidebar {
         width: 100% !important;
         height: auto !important;
-        padding: 12px 15px !important;
+        padding: 40px 20px 25px 20px !important;
         border-right: none !important;
-        border-bottom: 1px solid #231b36 !important;
-        position: sticky !important;
-        top: 0 !important;
-        flex-direction: row !important;
-        justify-content: space-between !important;
-        align-items: center !important;
-        z-index: 999 !important;
+        border-bottom: 2px solid #1e172e !important;
+        background-color: #120e1e !important;
     }
 
-    /* Menyembunyikan elemen padat demi menjimatkan ruang skrin fon */
-    .sidebar-profile .profile-img,
-    .sidebar-footer,
-    .social-icons {
-        display: none !important;
-    }
-
-    .sidebar-profile {
-        margin-bottom: 0 !important;
-        text-align: left !important;
-        width: auto !important;
+    .profile-img-container {
+        width: 130px !important; /* Saiz gambar profil bulat yang besar */
+        height: 130px !important;
+        border: 4px solid #32274a !important; /* Border tebal seperti contoh */
+        margin-bottom: 20px !important;
     }
 
     .sidebar-profile h2 {
-        font-size: 0.9rem !important;
-        white-space: nowrap !important;
+        font-size: 1.5rem !important; /* Nama penuh besar di tengah */
+        font-weight: bold !important;
+        max-width: 90%;
+        margin: 0 auto !important;
     }
 
-    /* Mengatur susunan Menu Navigasi secara melintang (horizontal) */
+    .social-icons {
+        margin-top: 15px !important;
+        margin-bottom: 25px !important;
+        gap: 15px !important;
+    }
+
+    .social-icons a {
+        background-color: #1e172e !important;
+        width: 40px !important;
+        height: 40px !important;
+    }
+
+    /* Susunan Menu Butang Berkembar (Grid Layout) */
     .nav-menu {
-        width: auto !important;
-        flex-grow: 0 !important;
+        width: 100% !important;
+        max-width: 340px !important; /* Hadkan lebar menu butang supaya compact */
     }
 
     .nav-menu ul {
-        display: flex !important;
-        flex-direction: row !important;
-        gap: 8px !important;
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important; /* Pecah 2 butang sebaris */
+        gap: 12px !important;
     }
 
-    .nav-menu ul li {
-        margin-bottom: 0 !important;
-    }
-
-    /* Menyembunyikan teks menu ("Home", "About Me") dan kekalkan ikon/emoji sahaja */
-    .nav-menu ul li a .menu-text {
-        display: none !important;
+    /* Butang tunggal 'Contact' di baris bawah sekali (Tengah) */
+    .nav-menu ul li:nth-child(5) {
+        grid-column: span 2 !important;
+        justify-self: center !important;
+        width: 50% !important;
     }
 
     .nav-menu ul li a {
-        padding: 8px 10px !important;
+        justify-content: center !important; /* Letak ikon & teks di tengah butang */
+        padding: 12px 10px !important;
+        background-color: #1a1429 !important; /* Warna butang gelap */
+        color: #9ca3af !important;
+        font-size: 0.9rem !important;
+        border: 1px solid transparent !important;
+    }
+
+    /* Butang Aktif (Contoh: Home warna ungu/kuning pudar) */
+    .nav-menu ul li.active a {
+        background-color: #2a1f42 !important; 
+        color: #c084fc !important;
+        border: 1px solid #4c3775 !important;
     }
 
     .menu-icon {
-        margin-right: 0 !important;
-        font-size: 1.2rem !important; /* Saiz mesra sentuhan jari */
+        margin-right: 8px !important; /* Jarak rapat antara emoji dan teks */
+        font-size: 1rem !important;
     }
 
-    /* Mengubah suai Kontena Kandungan utama */
+    /* Sembunyikan footer hak cipta di bahagian atas phone */
+    .sidebar-footer {
+        margin-top: 20px !important;
+        display: block !important;
+    }
+
+    /* --- Bahagian Kandungan Utama Bawah --- */
     .content-container {
         width: 100% !important;
         height: auto !important;
         overflow-y: visible !important;
     }
 
-    /* Mengecilkan saiz teks tajon utama di telefon pintar */
+    .main-content {
+        height: 60vh !important; /* Kecilkan bahagian hero bg phone sebab profile dah di atas */
+    }
+
     .hero-text h1 {
-        font-size: 1.7rem !important;
-        line-height: 1.3 !important;
+        display: none !important; /* Sembunyikan nama bertindih dalam hero text */
     }
 
     .hero-text p {
-        font-size: 0.95rem !important;
-        padding: 0 10px !important;
+        font-size: 1.05rem !important;
     }
 
-    .scroll-down {
-        margin-top: 50px !important;
-    }
-
-    /* Laraskan ruang padding bagi setiap seksyen halaman bawah */
     .page-section {
         padding: 50px 20px !important;
         min-height: auto !important;

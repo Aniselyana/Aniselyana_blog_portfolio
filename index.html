@@ -4,14 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Nurul Anis Elyana</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- Tambah parameter ?v=5.0 untuk buang cache lama GitHub -->
+    <link rel="stylesheet" href="style.css?v=5.0">
+    <!-- Pautan Font Awesome untuk ikon sosial -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
+    <!-- SIDEBAR (Desktop) / TOP PROFILE BLOCK (Mobile) -->
     <aside class="sidebar">
         <div class="sidebar-profile">
-            <img src="profile.jpg" alt="Nurul Anis Elyana" class="profile-img">
+            <div class="profile-img-container">
+                <!-- Pastikan nama fail gambar profil anda betul -->
+                <img src="profile.jpg" alt="Anis" class="profile-img" onerror="this.style.display='none';">
+            </div>
             <h2>Nurul Anis Elyana Binti Sahiron</h2>
         </div>
         
@@ -19,16 +25,16 @@
             <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
             <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
             <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
-            <a href="#contact"><i class="fas fa-envelope"></i></a>
+            <a href="mailto:anisn3823@gmail.com"><i class="fas fa-envelope"></i></a>
         </div>
 
         <nav class="nav-menu">
             <ul>
-                <li class="active"><a href="#home"><span class="menu-icon">🏠</span> <span class="menu-text">Home</span></a></li>
-                <li><a href="#about"><span class="menu-icon">👤</span> <span class="menu-text">About Me</span></a></li>
-                <li><a href="#resume"><span class="menu-icon">📄</span> <span class="menu-text">Resume</span></a></li>
-                <li><a href="#articles"><span class="menu-icon">📑</span> <span class="menu-text">Articles</span></a></li>
-                <li><a href="#contact"><span class="menu-icon">✉</span> <span class="menu-text">Contact</span></a></li>
+                <li class="active"><a href="#home"><span class="menu-icon">🏠</span><span class="menu-text">Home</span></a></li>
+                <li><a href="#about"><span class="menu-icon">👤</span><span class="menu-text">About Me</span></a></li>
+                <li><a href="#resume"><span class="menu-icon">📄</span><span class="menu-text">Resume</span></a></li>
+                <li><a href="#articles"><span class="menu-icon">📑</span><span class="menu-text">Articles</span></a></li>
+                <li><a href="#contact"><span class="menu-icon">✉</span><span class="menu-text">Contact</span></a></li>
             </ul>
         </nav>
 
@@ -37,6 +43,7 @@
         </div>
     </aside>
         
+    <!-- KONTENA KANDUNGAN UTAMA -->
     <div class="content-container">
         
         <main class="main-content" id="home">
@@ -56,8 +63,7 @@
             <div class="section-line"></div>
             <p>
                 Saya merupakan pelajar tahun akhir dalam bidang <strong>Ijazah Sarjana Muda Teknologi Maklumat (Media Informatika)</strong> di UniSZA. 
-                Fokus utama saya adalah dalam pembangunan aplikasi pendidikan berasaskan teknologi moden seperti <em>Augmented Reality</em> (AR) serta penciptaan kandungan digital yang kreatif dan membawa impak sosial. 
-                Saya gemar menggabungkan elemen interaktif untuk memudahkan proses pembelajaran serta mempromosikan kesejahteraan digital dalam masyarakat.
+                Fokus utama saya adalah dalam pembangunan aplikasi pendidikan berasaskan teknologi moden seperti <em>Augmented Reality</em> (AR) serta penciptaan kandungan digital yang kreatif dan membawa impak sosial.
             </p>
         </section>
 
@@ -69,58 +75,26 @@
             <p><strong>Pendidikan:</strong></p>
             <p>• Ijazah Sarjana Muda Teknologi Maklumat (Media Informatika) dengan Kepujian, UniSZA</p>
             <br>
-            <p><strong>Kemahiran Teknikal:</strong></p>
-            <p>• Pembangunan AR (Unity & Vuforia Engine)</p>
-            <p>• Reka Bentuk Grafik & Ilustrasi (Flat Vector Style, UI/UX Design)</p>
-            <p>• Produksi Video & Penulisan Skrip</p>
-            <br>
-            <a href="resume_anda.pdf" download class="download-btn" style="display: inline-block; padding: 10px 20px; background-color: #c084fc; color: #0c0a12; text-decoration: none; font-weight: bold; border-radius: 5px; margin-top: 15px;">Download CV (PDF)</a>
+            <a href="#" class="download-btn">Download CV (PDF)</a>
         </section>
 
         <section class="page-section" id="articles">
             <h2>Articles & Projects</h2>
             <div class="section-line"></div>
-            <p>Senarai projek akademik bagi kod kursus <strong>CSD34203</strong> dan projek media kreatif yang telah saya bangunkan:</p>
+            <p>Senarai projek akademik bagi kod kursus <strong>CSD34203</strong>:</p>
             <br>
-            <ul style="list-style: none; color: #9ca3af; line-height: 2;">
-                <li>🚀 <strong>AR ISYARATKU Application:</strong> Aplikasi pembelajaran interaktif Bahasa Isyarat Malaysia (BIM) menggunakan teknologi Augmented Reality (AR) dan integrasi model 3D gerak isyarat tangan.</li>
-                <li>📅 <strong>RM SEHARI Digital Savings Calendar:</strong> Reka bentuk kalendar simpanan digital bertema minimalis untuk pengurusan kewangan harian rakyat Malaysia.</li>
-                <li>🎬 <strong>"The Comment Section" - Cyberbullying Awareness Video:</strong> Video kesedaran digital yang memfokuskan kepada impak psikologi akibat buli siber demi memupuk empati dalam komuniti dalam talian.</li>
-                <li>🎮 <strong>Quest Forest: The Lost Totem:</strong> Pembangunan identiti visual dan reka bentuk logo untuk projek permainan mini kreatif.</li>
-            </ul>
+            <p>• 🚀 AR ISYARATKU Application</p>
+            <p>• 📅 RM SEHARI Digital Savings Calendar</p>
         </section>
 
         <section class="page-section" id="contact">
             <h2>Contact Me</h2>
             <div class="section-line"></div>
-            <p>Jika anda mempunyai sebarang pertanyaan atau ingin berkolaborasi, sila hubungi saya melalui emel rasmi di bawah:</p>
+            <p>Sila hubungi saya melalui emel rasmi di bawah:</p>
             <p style="margin-top: 15px;">📧 Emel: <a href="mailto:anisn3823@gmail.com" style="color: #c084fc; text-decoration: none; font-weight: bold;">anisn3823@gmail.com</a></p>
         </section>
 
     </div>
 
-    <script>
-    const sections = document.querySelectorAll('.page-section, .main-content');
-    const navLi = document.querySelectorAll('.nav-menu ul li');
-
-    document.querySelector('.content-container').addEventListener('scroll', () => {
-        let current = '';
-        const containerTop = document.querySelector('.content-container').getBoundingClientRect().top;
-
-        sections.forEach(section => {
-            const sectionTop = section.getBoundingClientRect().top - containerTop;
-            if (sectionTop <= 150) {
-                current = section.getAttribute('id');
-            }
-        });
-
-        navLi.forEach(li => {
-            li.classList.remove('active');
-            if (li.querySelector('a').getAttribute('href').includes(current)) {
-                li.classList.add('active');
-            }
-        });
-    });
-    </script>
 </body>
 </html>
