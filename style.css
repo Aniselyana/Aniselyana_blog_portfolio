@@ -128,7 +128,8 @@ body {
     height: 100vh;
     width: 100%;
     position: relative;
-    background: url('background.jpg') no-repeat center center/cover;
+    /* Telah dikemaskini mengikut nama folder images anda */
+    background: url('images/background.jpg') no-repeat center center/cover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -181,7 +182,6 @@ body {
     letter-spacing: 1px;
 }
 
-/* Kelas untuk mengawal animasi anak panah */
 .arrow-down, .scroll-arrow {
     margin-top: 10px;
     color: #c084fc;
