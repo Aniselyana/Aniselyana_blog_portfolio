@@ -1,5 +1,5 @@
 /* ==========================================================================
-   1. ASAS UTAMA & PAPARAN DESKTOP
+   1. STRUKTUR UTAMA & RUANG DESKTOP
    ========================================================================== */
 * {
     margin: 0;
@@ -10,7 +10,7 @@
 
 body {
     display: flex;
-    background-color: #030206;
+    background-color: #050408;
     color: #ffffff;
     height: 100vh;
     overflow: hidden;
@@ -18,12 +18,12 @@ body {
 
 .sidebar {
     width: 260px;
-    background-color: #09070f;
+    background-color: #0b0912;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 40px 20px;
-    border-right: 1px solid #130f1f;
+    padding: 35px 20px;
+    border-right: 1px solid #14111f;
     flex-shrink: 0;
     z-index: 100;
 }
@@ -35,22 +35,19 @@ body {
 }
 
 .profile-img-container {
-    width: 100px;
-    height: 100px;
+    width: 105px;
+    height: 105px;
     border-radius: 50%;
     border: 2px solid #c084fc;
     margin: 0 auto 15px auto;
+    background-color: #14111f;
     overflow: hidden;
-    box-shadow: 0 0 20px rgba(192, 132, 252, 0.2);
-    position: relative;
-    z-index: 1;
 }
 
 .profile-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
 }
 
 .sidebar-profile h2 {
@@ -64,33 +61,31 @@ body {
     color: #c084fc;
     text-transform: uppercase;
     letter-spacing: 2px;
-    margin-top: 5px;
+    margin-top: 6px;
 }
 
 .social-icons {
     display: flex;
-    gap: 10px;
-    margin-bottom: 35px;
+    gap: 12px;
+    margin-bottom: 30px;
 }
 
 .social-icons a {
     color: #9ca3af;
-    background-color: #130f1f;
-    width: 34px;
-    height: 34px;
+    background-color: #14111f;
+    width: 36px;
+    height: 36px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    font-size: 14px;
     transition: 0.3s ease;
 }
 
 .social-icons a:hover {
-    color: #030206;
+    color: #050408;
     background-color: #c084fc;
-    transform: translateY(-2px);
 }
 
 .nav-menu {
@@ -114,21 +109,19 @@ body {
     text-decoration: none;
     font-size: 0.95rem;
     font-weight: 500;
-    border-radius: 12px;
+    border-radius: 10px;
     transition: 0.3s;
-}
-
-.nav-menu ul li a i {
-    margin-right: 15px;
-    font-size: 1.1rem;
-    width: 20px;
-    text-align: center;
 }
 
 .nav-menu ul li.active a,
 .nav-menu ul li:hover a {
-    background-color: #130f1f;
+    background-color: #14111f;
     color: #c084fc;
+}
+
+.menu-icon {
+    margin-right: 15px;
+    font-size: 1.1rem;
 }
 
 .sidebar-footer {
@@ -137,7 +130,7 @@ body {
     color: #3b374d;
 }
 
-/* --- KONTENA KANDUNGAN --- */
+/* --- Kontena Kandungan --- */
 .content-container {
     flex-grow: 1;
     height: 100vh;
@@ -152,11 +145,11 @@ body {
     left: 0;
     width: 100%;
     height: 100vh;
-    padding: 60px 50px;
-    background-color: #030206;
+    padding: 80px 55px;
+    background-color: #050408;
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 1;
     overflow-y: auto;
 }
@@ -175,7 +168,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(3, 2, 6, 0.9);
+    background: rgba(5, 4, 8, 0.88);
     z-index: 1;
 }
 
@@ -188,11 +181,11 @@ body {
 .hero-text h1 {
     font-size: 3rem;
     font-weight: bold;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
 }
 
 .hero-text p {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     color: #9ca3af;
 }
 
@@ -202,106 +195,40 @@ body {
 
 .page-section h2 {
     font-size: 2.2rem;
-    font-weight: 700;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
 }
 
 .section-line {
-    width: 35px;
+    width: 40px;
     height: 4px;
     background-color: #c084fc;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     border-radius: 2px;
 }
 
-/* --- REKA BENTUK GRID WOW (SISTEM KAD) --- */
-.wow-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    width: 100%;
-}
-
-.wow-card {
-    background-color: #09070f;
-    border: 1px solid #130f1f;
-    padding: 25px;
+/* Kotak kandungan dalaman premium */
+.card-glass-inside {
+    background-color: #0b0912;
+    padding: 30px;
     border-radius: 16px;
-    flex: 1 1 calc(50% - 10px);
-    min-width: 280px;
+    border: 1px solid #14111f;
 }
 
-.wow-card.full-width {
-    flex: 1 1 100%;
-}
-
-.wow-card h3 {
-    font-size: 1.2rem;
-    color: #ffffff;
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.wow-card h3 i {
-    color: #c084fc;
-}
-
-.wow-card p {
-    font-size: 1rem;
+.page-section p {
+    font-size: 1.05rem;
     color: #9ca3af;
-    line-height: 1.7;
-}
-
-.project-tag {
-    display: inline-block;
-    padding: 4px 10px;
-    background-color: #130f1f;
-    color: #c084fc;
-    font-size: 0.75rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    border-radius: 6px;
-    margin-bottom: 12px;
-}
-
-.wow-card.interactive {
-    transition: transform 0.3s ease, border-color 0.3s ease;
-}
-
-.wow-card.interactive:hover {
-    transform: translateY(-5px);
-    border-color: #c084fc;
+    line-height: 1.8;
 }
 
 .download-btn {
     display: inline-block;
-    padding: 12px 28px;
+    padding: 12px 24px;
     background-color: #c084fc;
-    color: #030206;
+    color: #050408;
     text-decoration: none;
     font-weight: bold;
-    border-radius: 10px;
-    transition: 0.3s;
-}
-
-.download-btn:hover {
-    opacity: 0.9;
-}
-
-.contact-icon-wrapper {
-    font-size: 2.5rem;
-    color: #c084fc;
-    margin-bottom: 15px;
-}
-
-.email-highlight {
-    color: #c084fc;
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-decoration: none;
-    border-bottom: 2px solid rgba(192, 132, 252, 0.3);
+    border-radius: 8px;
+    margin-top: 20px;
 }
 
 .page-section:target, 
@@ -319,7 +246,7 @@ body:not(:has(:target)) #home {
 
 
 /* ==========================================================================
-   2. TRICK RESPONSIVE "WOW": FLOATING DOCK (KHAS UNTUK TELEFON)
+   2. REKA BENTUK RESPONSIF UNIK: HORIZONTAL SLIDE TRACK (KHAS PHONE)
    ========================================================================== */
 @media (max-width: 768px) {
     body {
@@ -328,18 +255,19 @@ body:not(:has(:target)) #home {
         height: 100vh !important;
     }
 
-    /* --- Struktur Profil Atas Mini --- */
+    /* --- Blok Profil Atas Ringkas --- */
     .sidebar {
         width: 100% !important;
         height: auto !important;
-        padding: 30px 20px 15px 20px !important;
+        padding: 25px 20px 10px 20px !important;
         border-right: none !important;
-        border-bottom: 1px solid #130f1f !important;
+        border-bottom: none !important; /* Buang garisan bawah sempadan */
+        background-color: #050408 !important; /* Tukar warna latar belakang agar sama dengan body */
     }
 
     .profile-img-container {
-        width: 80px !important;
-        height: 80px !important;
+        width: 75px !important; /* Kecilkan gambar agar jimat ruang skrin */
+        height: 75px !important;
         margin-bottom: 10px !important;
     }
 
@@ -349,110 +277,113 @@ body:not(:has(:target)) #home {
 
     .profile-tag {
         font-size: 0.7rem !important;
+        margin-top: 3px !important;
     }
 
     .social-icons {
-        margin-bottom: 0 !important;
-        margin-top: 10px !important;
+        margin-top: 8px !important;
+        margin-bottom: 15px !important;
+        gap: 12px !important;
+    }
+
+    .social-icons a {
+        background-color: #0b0912 !important;
+        width: 32px !important;
+        height: 32px !important;
+        font-size: 13px !important;
     }
 
     .sidebar-footer {
         display: none !important;
     }
 
-    /* --- REKA BENTUK TELEFON "WOW": FLOATING BAR (IOS DOCK STYLE) --- */
+    /* --- SISTEM MENU KREATIF: HORIZONTAL SLIDE TRACK --- */
     .nav-menu {
-        position: fixed !important;
-        bottom: 20px !important; /* Jarak terapung dari bawah skrin */
-        left: 50% !important;
-        transform: translateX(-50%) !important; /* Letak tepat di tengah skrin */
-        width: 90% !important;
-        max-width: 400px !important;
-        background-color: rgba(9, 7, 15, 0.85) !important; /* Lutsinar premium */
-        backdrop-filter: blur(12px) !important; /* Kesan kabur kaca */
-        padding: 10px 15px !important;
-        border-radius: 20px !important; /* Bucu sangat membulat lembut */
-        border: 1px solid rgba(192, 132, 252, 0.15) !important;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important; /* Bayang kedalaman */
-        z-index: 999 !important;
+        width: 100% !important;
+        overflow-x: auto !important; /* Hidupkan fungsi lerekan/skrol melintang */
+        white-space: nowrap !important; /* Paksa semua butang menu duduk sebaris */
+        padding: 5px 0 12px 0 !important;
+        /* Sembunyikan palang skrol hodoh di bawah butang menu pada phone */
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    /* Sembunyikan scrollbar untuk Chrome, Safari dan Opera */
+    .nav-menu::-webkit-scrollbar {
+        display: none;
     }
 
     .nav-menu ul {
-        display: flex !important;
+        display: inline-flex !important; /* Paksa flex melintang */
         flex-direction: row !important;
-        justify-content: space-between !important;
-        align-items: center !important;
-        width: 100% !important;
+        gap: 8px !important;
+        padding: 0 15px !important; /* Beri sedikit ruang kosong di tepi kiri kanan trek */
     }
 
     .nav-menu ul li {
         margin-bottom: 0 !important;
-        flex: 1 !important;
-        text-align: center !important;
+        display: inline-block !important;
     }
 
-    /* Reka bentuk butang ikon bulat dalam dock */
+    /* Reka bentuk Butang Menu bertema Kapsul Pilihan Pintar (Pill Tabs) */
     .nav-menu ul li a {
-        display: inline-flex !important;
-        flex-direction: column !important;
+        display: flex !important;
         align-items: center !important;
-        justify-content: center !important;
-        padding: 8px !important;
-        width: 45px !important;
-        height: 45px !important;
-        border-radius: 50% !important; /* Ikon bulat penuh */
-        color: #858095 !important;
-        background: transparent !important;
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        padding: 8px 16px !important;
+        background-color: #0b0912 !important; /* Warna kapsul malap */
+        color: #8e8a9f !important;
+        border-radius: 25px !important; /* Bulat penuh di kiri dan kanan kapsul */
+        border: 1px solid #14111f !important;
+        font-size: 0.85rem !important;
     }
 
-    /* Sembunyikan teks menu pada telefon, kekalkan ikon sahaja untuk kekal kemas */
-    .menu-text {
-        display: none !important;
+    .menu-icon {
+        margin-right: 6px !important;
+        font-size: 0.95rem !important;
     }
 
-    .nav-menu ul li a i {
-        margin-right: 0 !important; /* Buang jarak tepi ikon */
-        font-size: 1.15rem !important;
-    }
-
-    /* KESAN IKON AKTIF DALAM DOCK (Glow Active Tracker) */
+    /* Kesan Menyala Kapsul Aktif (Cyber Glowing Pill) */
     .nav-menu ul li.active a {
+        background-color: #14111f !important;
         color: #c084fc !important;
-        background-color: #1a152a !important; /* Kotak ikon tenggelam sedikit */
-        border: 1px solid rgba(192, 132, 252, 0.4) !important;
-        box-shadow: 0 0 12px rgba(192, 132, 252, 0.3) !important; /* Pantulan cahaya neon */
-        transform: translateY(-4px) scale(1.1) !important; /* Melonjak sedikit ke atas */
+        border: 1px solid #c084fc !important;
+        font-weight: bold !important;
+        text-shadow: 0 0 8px rgba(192, 132, 252, 0.5); /* Kesan tulisan menyala */
     }
 
-    /* --- Pengurusan Ruang Kandungan Bawah Phone --- */
+    /* --- KONTENA KANDUNGAN: FLOATING CANVAS LOOK --- */
     .content-container {
         width: 100% !important;
-        /* Potong ruang atas sahaja, bahagian bawah ditutup secara lutsinar oleh dock */
-        height: calc(100vh - 180px) !important; 
+        /* Kira baki ruang tontonan bawah selepas dipotong bar menu trek atas */
+        height: calc(100vh - 230px) !important;
+        padding: 0 15px 15px 15px !important; /* Beri jarak border sekeliling kontena */
     }
 
     .page-section, 
     .page-section-hero {
         height: 100% !important;
-        /* Beri padding bawah ekstra (90px) supaya kandungan tidak terlindung di sebalik dock */
-        padding: 25px 20px 90px 20px !important; 
+        padding: 25px 20px !important;
+        border-radius: 16px !important; /* Lengkungan hujung bucu kanvas kandung bawah */
     }
 
+    /* Sembunyikan teks nama bertindih dalam seksyen home di phone */
     .page-section-hero .hero-text h1 {
-        display: none !important; /* Sembunyikan nama bertindih pada seksyen utama */
+        display: none !important;
     }
 
     .page-section-hero .hero-text p {
         font-size: 1rem !important;
     }
 
+    .card-glass-inside {
+        padding: 20px !important; /* Kecilkan ruang padding dalaman kotak pada phone */
+        background-color: #0f0c18 !important; /* Bezakan warna kotak dalam pada paparan telefon */
+    }
+
     .page-section h2 {
         font-size: 1.5rem !important;
     }
 
-    .wow-card {
-        flex: 1 1 100% !important; /* Paksa kad grid menjadi satu baris penuh pada skrin kecil */
-        padding: 20px !important;
+    .page-section p {
+        font-size: 0.95rem !important;
     }
 }
