@@ -42,12 +42,15 @@ body {
     margin: 0 auto 15px auto;
     overflow: hidden;
     box-shadow: 0 0 20px rgba(192, 132, 252, 0.2);
+    position: relative;
+    z-index: 1;
 }
 
 .profile-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
 }
 
 .sidebar-profile h2 {
