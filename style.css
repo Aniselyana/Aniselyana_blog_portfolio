@@ -1,230 +1,275 @@
-/* Tetapan Asas */
+/* ==========================================================================
+   RESET & GOOGLE FONTS
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
     display: flex;
-    background-color: #0c0a12; /* Latar belakang hitam dengan tona ungu gelap */
+    background-color: #121212;
     color: #ffffff;
-    height: 100vh;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
-/* --- bahagian sidebar --- */
+/* ==========================================================================
+   SIDEBAR STYLE (Tema Coklat Gelap Estetik)
+   ========================================================================== */
 .sidebar {
-    width: 260px;
-    background-color: #120e1e; /* Warna ungu-gelap pekat untuk sidebar */
+    width: 300px;
+    height: 100vh;
+    background-color: #1e1512; /* Warna coklat gelap premium */
+    position: fixed;
+    top: 0;
+    left: 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 30px 15px;
-    border-right: 1px solid #231b36;
+    justify-content: space-between;
+    padding: 40px 20px;
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
     z-index: 10;
 }
 
-.sidebar-profile {
+/* Profil Gambar */
+.profile-section {
     text-align: center;
-    margin-bottom: 20px;
-    width: 100%;
+}
+
+.profile-img-container {
+    width: 110px;
+    height: 110px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    padding: 4px;
+    background: linear-gradient(135deg, #d4a373, #a3704c); /* Garisan border gradien */
 }
 
 .profile-img {
-    width: 100px;
-    height: 100px;
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid #a855f7; /* Bingkai warna ungu terang */
-    margin-bottom: 15px;
 }
 
-.sidebar-profile h2 {
-    font-size: 1rem;
+.profile-section h2 {
+    font-size: 1.2rem;
     font-weight: 600;
     color: #ffffff;
-    line-height: 1.3;
-    padding: 0 5px;
+    margin-bottom: 15px;
+    letter-spacing: 0.5px;
 }
 
 /* Ikon Sosial */
 .social-icons {
     display: flex;
-    gap: 10px;
-    margin-bottom: 30px;
+    justify-content: center;
+    gap: 12px;
 }
 
-.social-icons .icon {
-    width: 30px;
-    height: 30px;
-    background-color: #231b36;
+.social-icons a {
+    width: 36px;
+    height: 36px;
+    background-color: rgba(255, 255, 255, 0.08);
+    color: #e0e0e0;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #d8b4fe;
     text-decoration: none;
-    font-size: 0.85rem;
-    transition: 0.3s;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
 }
 
-.social-icons .icon:hover {
-    background-color: #a855f7;
-    color: #fff;
+.social-icons a:hover {
+    background-color: #d4a373; /* Warna emas/earthy apabila di-hover */
+    color: #1e1512;
+    transform: translateY(-3px);
 }
 
 /* Menu Navigasi */
 .nav-menu {
-    width: 100%;
-    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 30px 0;
 }
 
-.nav-menu ul {
-    list-style: none;
-}
-
-.nav-menu ul li {
-    margin-bottom: 10px;
-    border-radius: 5px;
-    transition: 0.3s;
-}
-
-.nav-menu ul li a {
+.nav-item {
     display: flex;
     align-items: center;
-    padding: 12px 15px;
-    color: #9ca3af;
+    gap: 15px;
+    padding: 12px 20px;
+    color: #b3a5a0;
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     font-weight: 500;
+    border-radius: 8px;
+    transition: all 0.3s ease;
 }
 
-.nav-menu ul li.active, .nav-menu ul li:hover {
-    background-color: #231b36;
+.nav-item i {
+    font-size: 1.1rem;
+    width: 20px;
 }
 
-.nav-menu ul li.active a, .nav-menu ul li:hover a {
-    color: #c084fc;
-}
-
-.menu-icon {
-    margin-right: 15px;
-    font-size: 1rem;
+.nav-item:hover, .nav-item.active {
+    background-color: rgba(212, 163, 115, 0.15);
+    color: #d4a373;
+    padding-left: 25px; /* Efek gelongsor sikit */
 }
 
 /* Footer Sidebar */
 .sidebar-footer {
     text-align: center;
-    font-size: 0.7rem;
-    color: #6b7280;
-    line-height: 1.4;
+    font-size: 0.75rem;
+    color: #7a6e6a;
+    line-height: 1.5;
 }
 
-/* --- bahagian susun atur kandungan kanan --- */
-.content-container {
-    flex-grow: 1;
+/* ==========================================================================
+   HERO SECTION (Kandungan Utama)
+   ========================================================================== */
+.hero-section {
+    margin-left: 300px; /* Jarak supaya tidak bertindih dengan sidebar */
+    width: calc(100% - 300px);
     height: 100vh;
-    overflow-y: scroll;
-    scroll-behavior: smooth; /* Kesan skrol yang lancar (smooth) */
-}
-
-/* --- bahagian main-content (Home) --- */
-.main-content {
-    height: 100vh;
-    width: 100%;
     position: relative;
-    background: url('background.jpg') no-repeat center center/cover;
+    /* Letakkan gambar pokok awak di bawah ini */
+    background: url('background.jpg') center/cover no-repeat; 
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    padding: 0 40px;
 }
 
-/* Lapisan Gelap di Atas Gambar (Overlay) dengan Tona Ungu Gelap */
+/* Efek Gelap untuk Menangkan Tulisan */
 .hero-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(18, 12, 28, 0.8);
+    background: linear-gradient(to bottom, rgba(18, 14, 12, 0.7), rgba(18, 14, 12, 0.85));
     z-index: 1;
 }
 
-/* Teks Utama */
-.hero-text {
+.hero-content {
     position: relative;
     z-index: 2;
-    text-align: center;
-    padding: 0 20px;
-}
-
-.hero-text h1 {
-    font-size: 3rem;
-    font-weight: bold;
-    margin-bottom: 15px;
-    letter-spacing: 1px;
-    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-}
-
-.hero-text p {
-    font-size: 1.2rem;
-    color: #e5e7eb;
-}
-
-/* Highlight Teks Utama */
-.highlight {
-    color: #c084fc;
-    border-bottom: 1.5px solid #c084fc;
-    padding-bottom: 2px;
-}
-
-/* Bahagian Tatal ke Bawah (Scroll Down) */
-.scroll-down {
-    margin-top: 100px;
-    font-size: 0.9rem;
-    color: #9ca3af;
-    letter-spacing: 1px;
-}
-
-.arrow-down {
-    margin-top: 10px;
-    color: #c084fc;
-    animation: bounce 2s infinite;
-}
-
-/* --- gaya untuk seksyen baru (About, Resume, dll.) --- */
-.page-section {
-    padding: 80px 50px;
-    background-color: #0c0a12;
-    min-height: 100vh;
-    border-bottom: 1px solid #231b36;
-}
-
-.page-section h2 {
-    font-size: 2.5rem;
-    color: #ffffff;
-    margin-bottom: 10px;
-}
-
-/* Garis hiasan di bawah tajuk seksyen */
-.section-line {
-    width: 50px;
-    height: 4px;
-    background-color: #c084fc;
-    margin-bottom: 30px;
-    border-radius: 2px;
-}
-
-.page-section p {
-    font-size: 1.1rem;
-    color: #9ca3af;
-    line-height: 1.8;
     max-width: 800px;
 }
 
-/* Animasi anak panah */
+/* Animasi & Gaya Tajuk */
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+    margin-bottom: 15px;
+    animation: fadeInUp 1s ease-out;
+}
+
+.hero-content h1 span {
+    color: #d4a373;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: #e0dcdb;
+    font-weight: 300;
+    margin-bottom: 35px;
+    line-height: 1.6;
+}
+
+.hero-subtitle .highlight {
+    color: #d4a373;
+    font-weight: 500;
+    border-bottom: 2px solid #d4a373;
+    padding-bottom: 2px;
+}
+
+/* Butang Interaktif */
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn {
+    padding: 12px 28px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #d4a373;
+    color: #1e1512;
+}
+
+.btn-primary:hover {
+    background-color: #c29262;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(212, 163, 115, 0.3);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #ffffff;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* Indikator Skrol ke Bawah */
+.scroll-down {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #b3a5a0;
+    letter-spacing: 1px;
+}
+
+.scroll-down i {
+    display: block;
+    margin-top: 8px;
+    font-size: 1.2rem;
+    color: #d4a373;
+}
+
+/* ==========================================================================
+   ANIMASI ANIMASI (Sumbangan Markah Kreativiti)
+   ========================================================================== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.bounce {
+    animation: bounce 2s infinite;
+}
+
 @keyframes bounce {
     0%, 20%, 50%, 80%, 100% {
         transform: translateY(0);
@@ -234,5 +279,31 @@ body {
     }
     60% {
         transform: translateY(-4px);
+    }
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN (Untuk Paparan Telefon)
+   ========================================================================== */
+@media (max-width: 992px) {
+    body {
+        flex-direction: column;
+    }
+    
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 30px 20px;
+    }
+    
+    .hero-section {
+        margin-left: 0;
+        width: 100%;
+        min-height: 80vh;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
     }
 }
