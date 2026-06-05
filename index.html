@@ -21,6 +21,7 @@
             <h2>Nurul Anis Elyana Binti Sahiron</h2>
             <p class="profile-tag">Media Informatics Specialist</p>
             
+            <!-- Butang Penukar Tema (Timbul mengikut imej rujukan) -->
             <button id="theme-toggle" class="theme-btn">
                 <i class="fas fa-moon"></i> <span id="theme-text">Dark Mode</span>
             </button>
@@ -35,7 +36,7 @@
 
         <nav class="nav-menu">
             <ul>
-                <li class="menu-item-home"><a href="#home"><i class="fas fa-home"></i><span class="menu-text">Home</span></a></li>
+                <li><a href="#home"><i class="fas fa-home"></i><span class="menu-text">Home</span></a></li>
                 <li><a href="#about"><i class="fas fa-user"></i><span class="menu-text">About</span></a></li>
                 <li><a href="#resume"><i class="fas fa-file-alt"></i><span class="menu-text">Resume</span></a></li>
                 <li><a href="#articles"><i class="fas fa-project-diagram"></i><span class="menu-text">Projects</span></a></li>
@@ -82,7 +83,7 @@
                 <div class="wow-card">
                     <h3><i class="fas fa-tools"></i> Kepakaran Utama</h3>
                     <p style="margin-top: 10px;">• Pembangunan AR (Unity & Vuforia Engine)</p>
-                    <p>• Reka Bentuk Grafik & UI/UX (Flat Vector Style)</p>
+                    <p style="margin-top: 5px;">• Reka Bentuk Grafik & UI/UX (Flat Vector Style)</p>
                 </div>
                 
                 <div class="wow-card full-width" style="text-align: center;">
@@ -145,7 +146,7 @@
     </div>
 
     <script>
-        // 1. KEMASKINI STATUS MENU AKTIF
+        // 1. KEMASKINI STATUS MENU AKTIF (Ditambah baik untuk mengesan #home secara default)
         function kemaskiniMenuAktif() {
             const hash = window.location.hash || '#home';
             document.querySelectorAll('.nav-menu ul li').forEach(li => {
