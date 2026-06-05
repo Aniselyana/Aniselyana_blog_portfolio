@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="style.css?v=12.5_premium">
+    <link rel="stylesheet" href="style.css?v=12.6_premium">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
@@ -92,10 +92,28 @@
             background: var(--hero-pill-bg);
             border: 1px solid var(--hero-pill-border);
             color: var(--hero-text-main);
-            padding: 6px 12px;
+            padding: 8px 12px;
             border-radius: 8px;
             font-size: 0.85rem;
             font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .competency-item {
+            padding: 16px;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.01);
+            border: 1px solid var(--hero-card-border);
+        }
+        
+        .competency-item ul {
+            margin: 8px 0 0 0;
+            padding-left: 20px;
+            color: var(--hero-text-sub);
+            font-size: 0.9rem;
+            line-height: 1.6;
         }
     </style>
 </head>
@@ -126,7 +144,7 @@
                 <li><a href="#home"><i class="fas fa-home"></i><span class="menu-text">Home</span></a></li>
                 <li><a href="#about"><i class="fas fa-user"></i><span class="menu-text">About</span></a></li>
                 <li><a href="#resume"><i class="fas fa-file-alt"></i><span class="menu-text">Resume</span></a></li>
-                <li><a href="#articles"><i class="fas fa-project-diagram"></i><span class="menu-text">Projects</span></a></li>
+                <li><a href="#articles"><i class="fas fa-blog"></i><span class="menu-text">Blog</span></a></li>
                 <li><a href="#contact"><i class="fas fa-paper-plane"></i><span class="menu-text">Contact</span></a></li>
             </ul>
         </nav>
@@ -164,13 +182,12 @@
                     "Passionate about <span class="highlight" style="color: var(--hero-accent); font-weight: 700; border-bottom: 1px dotted var(--hero-accent); padding-bottom: 2px;">multimedia technology</span>, web development, digital design, and interactive media."
                 </p>
 
-                <div style="display: flex; flex-wrap: wrap; gap: 24px; justify-content: center; text-shadow: none;">
-                    
-                    <div class="hero-premium-card" style="flex: 1; min-width: 300px; max-width: 390px; background: var(--hero-card-bg); border: 1px solid var(--hero-card-border); padding: 24px; border-radius: 16px; text-align: left;">
+                <div style="display: flex; justify-content: center; text-shadow: none;">
+                    <div class="hero-premium-card" style="width: 100%; max-width: 500px; background: var(--hero-card-bg); border: 1px solid var(--hero-card-border); padding: 24px; border-radius: 16px; text-align: left;">
                         <h3 style="color: var(--hero-text-main); font-size: 1.1rem; margin-top: 0; margin-bottom: 18px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; display: flex; align-items: center; gap: 10px;">
                             <i class="far fa-compass" style="color: var(--hero-accent);"></i> My Skills
                         </h3>
-                        <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                        <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: flex-start;">
                             <span class="skill-pill"><i class="fas fa-palette"></i> Graphic Design</span>
                             <span class="skill-pill"><i class="fas fa-code"></i> Web Development</span>
                             <span class="skill-pill"><i class="fas fa-window-restore"></i> UI/UX Design</span>
@@ -179,28 +196,8 @@
                             <span class="skill-pill"><i class="fas fa-icons"></i> Digital Content Creation</span>
                         </div>
                     </div>
-
-                    <div class="hero-premium-card" style="flex: 1; min-width: 300px; max-width: 390px; background: var(--hero-card-bg); border: 1px solid var(--hero-card-border); padding: 24px; border-radius: 16px; text-align: left; display: flex; flex-direction: column; justify-content: space-between;">
-                        <div>
-                            <h3 style="color: var(--hero-text-main); font-size: 1.1rem; margin-top: 0; margin-bottom: 16px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; display: flex; align-items: center; gap: 10px;">
-                                <i class="far fa-folder-open" style="color: var(--hero-accent);"></i> Featured Project
-                            </h3>
-                            <h4 style="color: var(--hero-accent); font-size: 1.15rem; margin: 4px 0 8px 0; font-weight: 700; letter-spacing: 0.3px;">
-                                AR IsyaratKu
-                            </h4>
-                            <p style="color: var(--hero-text-sub); font-size: 0.92rem; line-height: 1.6; margin: 0;">
-                                An augmented reality application designed to support sign language learning through interactive technology.
-                            </p>
-                        </div>
-                        
-                        <div style="margin-top: 20px; border-top: 1px solid var(--hero-card-border); padding-top: 12px;">
-                            <a href="#articles" style="display: inline-flex; align-items: center; gap: 6px; color: var(--hero-text-main); text-decoration: none; font-size: 0.85rem; font-weight: 600; letter-spacing: 0.5px; transition: color 0.2s ease;">
-                                View Details <i class="fas fa-chevron-right" style="font-size: 0.75rem; color: var(--hero-accent);"></i>
-                            </a>
-                        </div>
-                    </div>
-
                 </div>
+
             </div>
         </main>
 
@@ -212,7 +209,7 @@
             <div class="wow-grid" style="display: flex; flex-direction: column; gap: 24px;">
                 <div class="premium-layout-card" style="padding: 32px 36px;">
                     <p style="line-height: 1.8; font-size: 1.05rem; margin-bottom: 20px; color: var(--hero-text-main);">
-                        My name is <strong style="color: var(--hero-accent); font-weight: 600;">Anis Elyana</strong>, and I am currently pursuing a degree in <span style="border-bottom: 1px dashed var(--hero-accent); padding-bottom: 1px;">Information Technology (Informatics Media)</span> at Universiti Sultan Zainal Abidin (UniSZA). I have a strong interest in multimedia technologies, web development, user interface design, virtual reality, and digital content creation.
+                        My name is <strong style="color: var(--hero-accent); font-weight: 600;">Anis Elyana</strong>, and I am currently pursuing a degree in Information Technology (Informatics Media) at Universiti Sultan Zainal Abidin (UniSZA). I have a strong interest in multimedia technologies, web development, user interface design, virtual reality, and digital content creation.
                     </p>
                     <p style="line-height: 1.8; font-size: 1.05rem; margin-bottom: 0; color: var(--hero-text-sub);">
                         Through my academic projects, I have developed skills in creating interactive digital experiences and designing user-friendly applications. I focus on merging computer science principles with creative multimedia design to deliver meaningful, high-impact digital solutions.
@@ -229,7 +226,7 @@
                             Professional Goal
                         </h3>
                         <p style="font-size: 0.95rem; color: var(--hero-text-sub); line-height: 1.7; margin: 0;">
-                            My goal is to become a <strong style="color: var(--hero-text-main); font-weight: 600;">creative technology professional</strong> who effectively combines technology and design to develop innovative digital solutions that address real-world challenges.
+                            My goal is to become a creative technology professional who effectively combines technology and design to develop innovative digital solutions that address real-world challenges.
                         </p>
                     </div>
                     
@@ -241,21 +238,46 @@
                             Accessibility & Impact
                         </h3>
                         <p style="font-size: 0.95rem; color: var(--hero-text-sub); line-height: 1.7; margin: 0;">
-                            Leveraging Augmented Reality (AR) and modern UI/UX methodologies to bridge communication gaps, notably through inclusive sign language education tools like <span style="color: var(--hero-accent); font-weight: 500;">AR IsyaratKu</span>.
+                            Leveraging Augmented Reality (AR) and modern UI/UX methodologies to bridge communication gaps, notably through inclusive sign language education tools like AR IsyaratKu.
                         </p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- ==================== RESUME SECTION (ULTRA-ELEGANT LENGKAP) ==================== -->
+        <!-- ==================== RESUME SECTION ==================== -->
         <section class="page-section" id="resume" style="padding: 60px 0;">
             <h2 style="font-size: 2rem; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 6px;">Resume</h2>
             <div style="width: 32px; height: 3px; background: var(--card-gradient-accent); border-radius: 2px; margin-bottom: 35px;"></div>
             
             <div style="display: flex; flex-direction: column; gap: 30px;">
                 
-                <!-- 🎯 CAREER OBJECTIVE -->
+                <!-- 1. EDUCATION -->
+                <div class="premium-layout-card" style="padding: 28px 30px;">
+                    <h3 style="font-size: 1.2rem; font-weight: 700; margin-top: 0; margin-bottom: 16px; color: var(--hero-text-main); display: flex; align-items: center; gap: 10px;">
+                        <i class="fas fa-graduation-cap" style="color: var(--hero-accent);"></i> Education
+                    </h3>
+                    <h4 style="font-size: 1.1rem; font-weight: 700; color: var(--hero-text-main); margin: 0 0 4px 0;">
+                        Bachelor of Information Technology (Media Informatics) with Honours
+                    </h4>
+                    <p style="font-size: 0.95rem; color: var(--hero-text-sub); margin: 0 0 20px 0; font-weight: 500;">
+                        Universiti Sultan Zainal Abidin (UniSZA) <span style="color: var(--hero-accent); margin-left: 8px;">• 2023 – 2027</span>
+                    </p>
+                    
+                    <h5 style="font-size: 0.9rem; font-weight: 700; color: var(--hero-text-main); margin: 0 0 12px 0; text-transform: uppercase; letter-spacing: 0.5px;">
+                        Areas of Study:
+                    </h5>
+                    <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                        <span class="resume-badge"><i class="fas fa-photo-video" style="color: var(--hero-accent);"></i> Interactive Multimedia</span>
+                        <span class="resume-badge"><i class="fas fa-mobile-alt" style="color: var(--hero-accent);"></i> Web and Mobile Application Development</span>
+                        <span class="resume-badge"><i class="fas fa-window-restore" style="color: var(--hero-accent);"></i> UI/UX Design</span>
+                        <span class="resume-badge"><i class="fas fa-vr-cardboard" style="color: var(--hero-accent);"></i> Augmented Reality (AR) & Virtual Reality (VR)</span>
+                        <span class="resume-badge"><i class="fas fa-cubes" style="color: var(--hero-accent);"></i> Digital Content Creation</span>
+                        <span class="resume-badge"><i class="fas fa-users" style="color: var(--hero-accent);"></i> Human-Computer Interaction</span>
+                    </div>
+                </div>
+
+                <!-- 2. CAREER OBJECTIVE -->
                 <div class="premium-layout-card" style="padding: 28px 32px;">
                     <h3 style="font-size: 1.2rem; font-weight: 700; margin-top: 0; margin-bottom: 14px; color: var(--hero-text-main); display: flex; align-items: center; gap: 10px;">
                         <i class="fas fa-bullseye" style="color: var(--hero-accent); font-size: 1.1rem;"></i> Career Objective
@@ -265,130 +287,121 @@
                     </p>
                 </div>
 
-                <!-- Petak Berkembar: Education & Core Competencies -->
-                <div style="display: flex; flex-wrap: wrap; gap: 24px;">
+                <!-- 3. CORE COMPETENCIES -->
+                <div class="premium-layout-card" style="padding: 28px 30px;">
+                    <h3 style="font-size: 1.2rem; font-weight: 700; margin-top: 0; margin-bottom: 20px; color: var(--hero-text-main); display: flex; align-items: center; gap: 10px;">
+                        <i class="fas fa-tools" style="color: var(--hero-accent);"></i> Core Competencies
+                    </h3>
                     
-                    <!-- 📖 EDUCATION -->
-                    <div class="premium-layout-card" style="flex: 1; min-width: 320px; padding: 28px 30px;">
-                        <h3 style="font-size: 1.2rem; font-weight: 700; margin-top: 0; margin-bottom: 16px; color: var(--hero-text-main); display: flex; align-items: center; gap: 10px;">
-                            <i class="fas fa-graduation-cap" style="color: var(--hero-accent);"></i> Education
-                        </h3>
-                        <h4 style="font-size: 1.05rem; font-weight: 700; color: var(--hero-text-main); margin: 0 0 4px 0;">
-                            Bachelor of Information Technology (Media Informatics) with Honours
-                        </h4>
-                        <p style="font-size: 0.9rem; color: var(--hero-text-sub); margin: 0 0 16px 0; font-weight: 500;">
-                            Universiti Sultan Zainal Abidin (UniSZA) <span style="color: var(--hero-accent); margin-left: 8px;">• 2022 – 2026</span>
-                        </p>
-                        
-                        <h5 style="font-size: 0.9rem; font-weight: 700; color: var(--hero-text-main); margin: 0 0 10px 0; text-transform: uppercase; letter-spacing: 0.5px;">
-                            Areas of Study:
-                        </h5>
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
-                            <span class="resume-badge"><i class="far fa-circle" style="font-size: 0.6rem; color: var(--hero-accent); margin-right: 6px;"></i> Media Informatics</span>
-                            <span class="resume-badge"><i class="far fa-circle" style="font-size: 0.6rem; color: var(--hero-accent); margin-right: 6px;"></i> Interactive Multimedia</span>
-                            <span class="resume-badge"><i class="far fa-circle" style="font-size: 0.6rem; color: var(--hero-accent); margin-right: 6px;"></i> Digital App Dev</span>
-                            <span class="resume-badge"><i class="far fa-circle" style="font-size: 0.6rem; color: var(--hero-accent); margin-right: 6px;"></i> AR & VR Technology</span>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px;">
+                        <div class="competency-item">
+                            <h4 style="font-size: 1rem; font-weight: 700; color: var(--hero-accent); margin: 0;">Augmented Reality Development</h4>
+                            <ul>
+                                <li>Developing AR applications using Unity 3D and Vuforia Engine</li>
+                                <li>Creating interactive learning experiences with 3D content</li>
+                                <li>Integrating digital content into real-world environments</li>
+                            </ul>
+                        </div>
+                        <div class="competency-item">
+                            <h4 style="font-size: 1rem; font-weight: 700; color: var(--hero-accent); margin: 0;">UI/UX Design</h4>
+                            <ul>
+                                <li>Designing intuitive and user-friendly interfaces</li>
+                                <li>Creating wireframes, prototypes, and visual layouts</li>
+                                <li>Developing modern flat-vector illustrations and digital assets</li>
+                            </ul>
+                        </div>
+                        <div class="competency-item">
+                            <h4 style="font-size: 1rem; font-weight: 700; color: var(--hero-accent); margin: 0;">Web Development</h4>
+                            <ul>
+                                <li>Building responsive websites using HTML, CSS, and JavaScript</li>
+                                <li>Designing visually appealing and functional web interfaces</li>
+                                <li>Implementing interactive features to enhance user experience</li>
+                            </ul>
+                        </div>
+                        <div class="competency-item">
+                            <h4 style="font-size: 1rem; font-weight: 700; color: var(--hero-accent); margin: 0;">Multimedia Production</h4>
+                            <ul>
+                                <li>Planning storyboards and organizing multimedia content</li>
+                                <li>Producing and editing awareness and educational videos</li>
+                                <li>Developing engaging multimedia presentations and digital content</li>
+                            </ul>
+                        </div>
+                        <div class="competency-item">
+                            <h4 style="font-size: 1rem; font-weight: 700; color: var(--hero-accent); margin: 0;">Virtual Reality Development</h4>
+                            <ul>
+                                <li>Designing immersive VR learning environments</li>
+                                <li>Creating interactive virtual experiences using Unity 3D</li>
+                                <li>Integrating 3D assets and user interactions in virtual spaces</li>
+                            </ul>
+                        </div>
+                        <div class="competency-item">
+                            <h4 style="font-size: 1rem; font-weight: 700; color: var(--hero-accent); margin: 0;">Digital Content Creation</h4>
+                            <ul>
+                                <li>Producing creative visual and multimedia materials</li>
+                                <li>Designing content for educational and promotional purposes</li>
+                                <li>Combining technology and creativity to communicate ideas effectively</li>
+                            </ul>
                         </div>
                     </div>
-
-                    <!-- 🛠 CORE COMPETENCIES -->
-                    <div class="premium-layout-card" style="flex: 1; min-width: 320px; padding: 28px 30px;">
-                        <h3 style="font-size: 1.2rem; font-weight: 700; margin-top: 0; margin-bottom: 16px; color: var(--hero-text-main); display: flex; align-items: center; gap: 10px;">
-                            <i class="fas fa-cubes" style="color: var(--hero-accent);"></i> Core Competencies
-                        </h3>
-                        
-                        <div style="display: flex; flex-direction: column; gap: 14px;">
-                            <div>
-                                <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--hero-accent); margin: 0 0 2px 0;">Augmented Reality Development</h4>
-                                <p style="font-size: 0.88rem; color: var(--hero-text-sub); margin: 0; line-height: 1.4;">Developing AR applications using Unity and Vuforia. Creating interactive learning experiences with 3D content.</p>
-                            </div>
-                            <div style="border-top: 1px solid var(--hero-card-border); padding-top: 10px;">
-                                <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--hero-accent); margin: 0 0 2px 0;">UI/UX Design</h4>
-                                <p style="font-size: 0.88rem; color: var(--hero-text-sub); margin: 0; line-height: 1.4;">Designing user-friendly interfaces. Creating modern flat-vector illustrations and digital assets.</p>
-                            </div>
-                            <div style="border-top: 1px solid var(--hero-card-border); padding-top: 10px;">
-                                <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--hero-accent); margin: 0 0 2px 0;">Multimedia Production</h4>
-                                <p style="font-size: 0.88rem; color: var(--hero-text-sub); margin: 0; line-height: 1.4;">Storyboard planning, video editing, awareness campaign production, and interactive content development.</p>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
 
-                <!-- 💻 TOOLS & TECHNOLOGIES -->
+                <!-- 4. TOOLS & TECHNOLOGIES -->
                 <div class="premium-layout-card" style="padding: 28px 32px;">
                     <h3 style="font-size: 1.2rem; font-weight: 700; margin-top: 0; margin-bottom: 20px; color: var(--hero-text-main); display: flex; align-items: center; gap: 10px;">
                         <i class="fas fa-laptop-code" style="color: var(--hero-accent);"></i> Tools & Technologies
                     </h3>
                     
-                    <div style="display: flex; flex-wrap: wrap; gap: 24px;">
-                        <div style="flex: 1; min-width: 140px;">
-                            <h4 style="font-size: 0.85rem; color: var(--hero-text-muted); text-transform: uppercase; letter-spacing: 0.5px; margin: 0 0 10px 0;">AR Development</h4>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 20px;">
+                        <div>
+                            <h4 style="font-size: 0.85rem; color: var(--hero-text-muted); text-transform: uppercase; letter-spacing: 0.5px; margin: 0 0 10px 0;">AR/VR Dev</h4>
                             <div style="display: flex; flex-direction: column; gap: 6px;">
-                                <span class="resume-badge" style="text-align: center;"><i class="fab fa-unity" style="color:#4ade80;"></i> Unity 3D</span>
-                                <span class="resume-badge" style="text-align: center;"><i class="fas fa-cube" style="color:#60a5fa;"></i> Vuforia Engine</span>
+                                <span class="resume-badge"><i class="fab fa-unity" style="color:#4ade80;"></i> Unity 3D</span>
+                                <span class="resume-badge"><i class="fas fa-cube" style="color:#60a5fa;"></i> Vuforia Engine</span>
+                                <span class="resume-badge"><i class="fas fa-shapes" style="color:orange;"></i> Blender</span>
+                                <span class="resume-badge"><i class="fas fa-bezier-curve" style="color:#2dd4bf;"></i> Maya</span>
                             </div>
                         </div>
-                        <div style="flex: 1; min-width: 140px;">
+                        <div>
                             <h4 style="font-size: 0.85rem; color: var(--hero-text-muted); text-transform: uppercase; letter-spacing: 0.5px; margin: 0 0 10px 0;">Programming</h4>
                             <div style="display: flex; flex-direction: column; gap: 6px;">
-                                <span class="resume-badge" style="text-align: center;"><i class="fas fa-code" style="color:#c084fc;"></i> C# Scripting</span>
+                                <span class="resume-badge"><i class="fas fa-code" style="color:#c084fc;"></i> C# Scripting</span>
+                                <span class="resume-badge"><i class="fab fa-js-square" style="color:#fbbf24;"></i> JavaScript</span>
                             </div>
                         </div>
-                        <div style="flex: 1; min-width: 140px;">
+                        <div>
                             <h4 style="font-size: 0.85rem; color: var(--hero-text-muted); text-transform: uppercase; letter-spacing: 0.5px; margin: 0 0 10px 0;">Design Tools</h4>
                             <div style="display: flex; flex-direction: column; gap: 6px;">
-                                <span class="resume-badge" style="text-align: center;"><i class="fab fa-figma" style="color:#ff7262;"></i> Figma</span>
-                                <span class="resume-badge" style="text-align: center;"><i class="fas fa-pen-nib" style="color:#fbbf24;"></i> Illustrator</span>
+                                <span class="resume-badge"><i class="fab fa-figma" style="color:#ff7262;"></i> Figma</span>
+                                <span class="resume-badge"><i class="fas fa-pen-nib" style="color:#fbbf24;"></i> Illustrator</span>
+                                <span class="resume-badge"><i class="fas fa-running" style="color:#f87171;"></i> Adobe Animate</span>
                             </div>
                         </div>
-                        <div style="flex: 1; min-width: 140px;">
+                        <div>
                             <h4 style="font-size: 0.85rem; color: var(--hero-text-muted); text-transform: uppercase; letter-spacing: 0.5px; margin: 0 0 10px 0;">Production</h4>
                             <div style="display: flex; flex-direction: column; gap: 6px;">
-                                <span class="resume-badge" style="text-align: center;"><i class="fas fa-video" style="color:#f87171;"></i> Video Production</span>
-                                <span class="resume-badge" style="text-align: center;"><i class="fas fa-map" style="color:#2dd4bf;"></i> Storyboarding</span>
+                                <span class="resume-badge"><i class="fas fa-video" style="color:#f87171;"></i> Video Production</span>
+                                <span class="resume-badge"><i class="fas fa-map" style="color:#2dd4bf;"></i> Storyboarding</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- 🌟 PROFESSIONAL SKILLS & ❤️ AREAS OF INTEREST -->
-                <div style="display: flex; flex-wrap: wrap; gap: 24px;">
-                    
-                    <!-- Skills -->
-                    <div class="premium-layout-card" style="flex: 1; min-width: 300px; padding: 26px 28px;">
-                        <h3 style="font-size: 1.15rem; font-weight: 700; margin-top: 0; margin-bottom: 16px; color: var(--hero-text-main); display: flex; align-items: center; gap: 10px;">
-                            <i class="fas fa-star" style="color: var(--hero-accent);"></i> Professional Skills
-                        </h3>
-                        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
-                            <span class="skill-pill">Creative Problem Solving</span>
-                            <span class="skill-pill">Team Collaboration</span>
-                            <span class="skill-pill">Project Management</span>
-                            <span class="skill-pill">Visual Communication</span>
-                            <span class="skill-pill">Digital Content Creation</span>
-                            <span class="skill-pill">Critical Thinking</span>
-                            <span class="skill-pill">Presentation Skills</span>
-                        </div>
+                <!-- 5. PROFESSIONAL SKILLS -->
+                <div class="premium-layout-card" style="padding: 26px 28px;">
+                    <h3 style="font-size: 1.15rem; font-weight: 700; margin-top: 0; margin-bottom: 16px; color: var(--hero-text-main); display: flex; align-items: center; gap: 10px;">
+                        <i class="fas fa-star" style="color: var(--hero-accent);"></i> Professional Skills
+                    </h3>
+                    <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                        <span class="skill-pill">Creative Problem Solving</span>
+                        <span class="skill-pill">Team Collaboration</span>
+                        <span class="skill-pill">Project Management</span>
+                        <span class="skill-pill">Visual Communication</span>
+                        <span class="skill-pill">Digital Content Creation</span>
+                        <span class="skill-pill">Critical Thinking</span>
+                        <span class="skill-pill">Presentation Skills</span>
                     </div>
-
-                    <!-- Interests -->
-                    <div class="premium-layout-card" style="flex: 1; min-width: 300px; padding: 26px 28px;">
-                        <h3 style="font-size: 1.15rem; font-weight: 700; margin-top: 0; margin-bottom: 16px; color: var(--hero-text-main); display: flex; align-items: center; gap: 10px;">
-                            <i class="fas fa-heart" style="color: var(--hero-accent);"></i> Areas of Interest
-                        </h3>
-                        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
-                            <span class="skill-pill">Augmented Reality</span>
-                            <span class="skill-pill">Virtual Reality</span>
-                            <span class="skill-pill">UI/UX Design</span>
-                            <span class="skill-pill">Multimedia Tech</span>
-                            <span class="skill-pill">Interactive Media</span>
-                            <span class="skill-pill">Digital Illustration</span>
-                        </div>
-                    </div>
-
                 </div>
 
-                <!-- CV Download Button -->
                 <div style="text-align: center; margin-top: 10px;">
                     <a href="resume.pdf" download class="download-btn" style="padding: 12px 30px; font-weight: 600; letter-spacing: 0.5px;">
                         <i class="fas fa-download"></i> Download Full CV (PDF)
@@ -398,14 +411,13 @@
             </div>
         </section>
 
-        <!-- ==================== ACADEMIC PROJECTS SECTION ==================== -->
+        <!-- ==================== BLOG SECTION ==================== -->
         <section class="page-section" id="articles" style="padding: 60px 0;">
-            <h2 style="font-size: 2rem; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 6px;">Academic Projects</h2>
+            <h2 style="font-size: 2rem; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 6px;">Blog</h2>
             <div style="width: 32px; height: 3px; background: var(--card-gradient-accent); border-radius: 2px; margin-bottom: 35px;"></div>
             
             <div class="wow-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 24px;">
                 
-                <!-- Projek 1: AR Isyaratku -->
                 <div class="premium-layout-card" style="padding: 28px; position: relative;">
                     <div style="position: absolute; top: 24px; right: 24px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--hero-accent); background: rgba(167, 139, 250, 0.1); padding: 4px 10px; border-radius: 6px;">
                         AR Tech
@@ -416,7 +428,6 @@
                     </p>
                 </div>
 
-                <!-- Projek 2: VR Extinct Animals -->
                 <div class="premium-layout-card" style="padding: 28px; position: relative;">
                     <div style="position: absolute; top: 24px; right: 24px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--hero-accent); background: rgba(167, 139, 250, 0.1); padding: 4px 10px; border-radius: 6px;">
                         VR Tech
@@ -427,7 +438,6 @@
                     </p>
                 </div>
 
-                <!-- Projek 3: FluffyCones Website -->
                 <div class="premium-layout-card" style="padding: 28px; position: relative;">
                     <div style="position: absolute; top: 24px; right: 24px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--hero-accent); background: rgba(167, 139, 250, 0.1); padding: 4px 10px; border-radius: 6px;">
                         Web UI
@@ -438,14 +448,13 @@
                     </p>
                 </div>
 
-                <!-- Projek 4: Multimedia Awareness Video -->
                 <div class="premium-layout-card" style="padding: 28px; position: relative;">
                     <div style="position: absolute; top: 24px; right: 24px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--hero-accent); background: rgba(167, 139, 250, 0.1); padding: 4px 10px; border-radius: 6px;">
-                        Production
+                        Animation
                     </div>
-                    <h3 style="font-size: 1.2rem; font-weight: 700; margin: 0 0 12px 0; color: var(--hero-text-main);">Multimedia Awareness Video</h3>
+                    <h3 style="font-size: 1.2rem; font-weight: 700; margin: 0 0 12px 0; color: var(--hero-text-main);">3D Room Transformation Animation</h3>
                     <p style="font-size: 0.95rem; color: var(--hero-text-sub); line-height: 1.6; margin: 0;">
-                        Produced awareness campaigns and interactive digital media using advanced storyboard planning, digital illustration, and editing techniques.
+                        A cluttered room being dynamically transformed into an organized, functional, and visually pleasing environment using advanced 3D asset rearrangement techniques.
                     </p>
                 </div>
 
