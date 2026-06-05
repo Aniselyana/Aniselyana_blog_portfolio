@@ -21,7 +21,7 @@
             <h2>Nurul Anis Elyana Binti Sahiron</h2>
             <p class="profile-tag">Media Informatics Specialist</p>
             
-            <!-- Butang Penukar Tema (Timbul mengikut imej rujukan) -->
+            <!-- Butang Penukar Tema -->
             <button id="theme-toggle" class="theme-btn">
                 <i class="fas fa-moon"></i> <span id="theme-text">Dark Mode</span>
             </button>
@@ -51,42 +51,104 @@
         
     <div class="content-container">
         
-        <main class="page-section-hero" id="home">
-            <div class="hero-overlay"></div>
-            <div class="hero-text">
-                <h1>Nurul Anis Elyana Binti Sahiron</h1>
-                <p>I am a final-year student majoring in <span class="highlight">Informatics Media</span> at UniSZA.</p>
+        <!-- ==================== HOME SECTION (KONTRAS TINGGI + ELEGANT) ==================== -->
+        <main class="page-section-hero" id="home" style="position: relative;">
+            <!-- Memaksa lapisan overlay gelap menapis imej latar belakang pokok -->
+            <div class="hero-overlay" style="position: absolute; top:0; left:0; width:100%; height:100%; background: rgba(0, 0, 0, 0.45); z-index: 1;"></div>
+            
+            <!-- Ditambah text-shadow padat supaya teks putih timbul keluar dari imej -->
+            <div class="hero-text" style="z-index: 2; position: relative; text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.85);">
+                
+                <!-- GAYA ELEGAN BARU: Welcome bertukar menjadi pembuka bicara yang premium -->
+                <div style="display: flex; align-items: center; justify-content: center; gap: 15px; margin-bottom: 15px;">
+                    <span style="display: inline-block; width: 30px; height: 1px; background: rgba(233, 213, 255, 0.6);"></span>
+                    <p style="font-size: 0.9rem; color: #e9d5ff; font-weight: 600; letter-spacing: 4px; text-transform: uppercase; margin: 0; font-style: italic;">
+                        Welcome to my space
+                    </p>
+                    <span style="display: inline-block; width: 30px; height: 1px; background: rgba(233, 213, 255, 0.6);"></span>
+                </div>
+
+                <!-- Nama Anda -->
+                <h1 style="font-size: 3rem; font-weight: 700; margin-bottom: 12px; line-height: 1.2; color: #ffffff;">
+                    Hi, I'm Anis Elyana 👋
+                </h1>
+                <!-- Jurusan Pengajian -->
+                <p style="font-size: 1.25rem; color: #ffffff; font-weight: 600; margin-bottom: 20px; letter-spacing: 0.5px;">
+                    Information Technology (Informatics Media) Student
+                </p>
+                <!-- Tagline Moto -->
+                <p style="font-size: 1.05rem; color: rgba(255, 255, 255, 0.9); max-width: 650px; margin: 0 auto 25px auto; line-height: 1.6; font-style: italic;">
+                    "Passionate about <span class="highlight" style="color: #e9d5ff; font-weight: 700;">multimedia technology</span>, <span class="highlight" style="color: #e9d5ff; font-weight: 700;">web development</span>, <span class="highlight" style="color: #e9d5ff; font-weight: 700;">digital design</span>, and <span class="highlight" style="color: #e9d5ff; font-weight: 700;">interactive media</span>."
+                </p>
             </div>
         </main>
 
+        <!-- ==================== ABOUT SECTION ==================== -->
         <section class="page-section" id="about">
             <h2>About Me</h2>
             <div class="section-line"></div>
             <div class="wow-grid">
                 <div class="wow-card full-width">
-                    <p>
-                        Saya merupakan pelajar tahun akhir dalam bidang <strong>Ijazah Sarjana Muda Teknologi Maklumat (Media Informatika)</strong> di UniSZA. 
-                        Fokus utama saya adalah dalam pembangunan aplikasi pendidikan berasaskan teknologi moden seperti <em>Augmented Reality</em> (AR) serta penciptaan kandungan digital yang kreatif dan membawa impak sosial.
+                    <p style="line-height: 1.7; font-size: 1.05rem;">
+                        Saya merupakan pelajar tahun akhir dalam bidang <strong>Ijazah Sarjana Muda Teknologi Maklumat (Media Informatika)</strong> di Universiti Sultan Zainal Abidin (UniSZA).
+                        Fokus utama saya bertumpu kepada penggabungan elemen multimedia kreatif dan sains komputer bagi membina aplikasi pendidikan inklusif berasaskan <strong>Augmented Reality (AR)</strong> serta penghasilan media digital interaktif yang mampu membawa impak kesedaran sosial yang positif kepada komuniti.
                     </p>
+                </div>
+            </div>
+
+            <!-- Nilai Teras & Prinsip Kerja -->
+            <div class="wow-grid" style="margin-top: 20px;">
+                <div class="wow-card">
+                    <h3><i class="fas fa-heart" style="color: var(--accent-color); margin-right: 8px;"></i> Reka Bentuk Berempati</h3>
+                    <p style="margin-top: 10px; font-size: 0.9rem; color: var(--text-muted);">Sentiasa mementingkan aspek emosi, psikologi, dan etika pengguna dalam penulisan skrip serta penghasilan kandungan media kesedaran digital.</p>
+                </div>
+                <div class="wow-card">
+                    <h3><i class="fas fa-universal-access" style="color: var(--accent-color); margin-right: 8px;"></i> Aksesibiliti Pendidikan</h3>
+                    <p style="margin-top: 10px; font-size: 0.9rem; color: var(--text-muted);">Memanfaatkan teknologi AR untuk merapatkan jurang komunikasi komuniti pekak melalui visualisasi gestur isyarat yang interaktif.</p>
                 </div>
             </div>
         </section>
 
+        <!-- ==================== RESUME SECTION ==================== -->
         <section class="page-section" id="resume">
             <h2>Resume</h2>
             <div class="section-line"></div>
             <div class="wow-grid">
                 <div class="wow-card">
                     <h3><i class="fas fa-graduation-cap"></i> Pendidikan</h3>
-                    <p style="margin-top: 10px;">• Ijazah Sarjana Muda Teknologi Maklumat (Media Informatika) dengan Kepujian, UniSZA</p>
+                    <p style="margin-top: 10px; font-weight: 600; color: var(--text-main);">Ijazah Sarjana Muda Teknologi Maklumat (Media Informatika) dengan Kepujian</p>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 4px;">Universiti Sultan Zainal Abidin (UniSZA) • 2022 - 2026</p>
                 </div>
                 <div class="wow-card">
                     <h3><i class="fas fa-tools"></i> Kepakaran Utama</h3>
-                    <p style="margin-top: 10px;">• Pembangunan AR (Unity & Vuforia Engine)</p>
-                    <p style="margin-top: 5px;">• Reka Bentuk Grafik & UI/UX (Flat Vector Style)</p>
+                    <p style="margin-top: 10px;">• Pembangunan AR & Gestur Interaktif (Unity & Vuforia)</p>
+                    <p style="margin-top: 5px;">• Reka Bentuk UI/UX & Ilustrasi Rata (Modern Flat Vector)</p>
+                    <p style="margin-top: 5px;">• Pengurusan Papan Cerita & Penerbitan Video Kesedaran</p>
+                </div>
+
+                <!-- Paparan Visual Tech Stack -->
+                <div class="wow-card full-width" style="margin-top: 10px;">
+                    <h3><i class="fas fa-laptop-code"></i> Alatan & Teknologi (Tech Stack)</h3>
+                    <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 15px;">
+                        <span style="background: var(--bg-container); border: 1px solid var(--border-color); padding: 8px 16px; border-radius: 20px; font-size: 0.85rem; color: var(--text-main); font-weight: 500;">
+                            <i class="fab fa-unity" style="color: #4ade80; margin-right: 6px;"></i> Unity 3D
+                        </span>
+                        <span style="background: var(--bg-container); border: 1px solid var(--border-color); padding: 8px 16px; border-radius: 20px; font-size: 0.85rem; color: var(--text-main); font-weight: 500;">
+                            <i class="fas fa-cube" style="color: #60a5fa; margin-right: 6px;"></i> Vuforia Engine
+                        </span>
+                        <span style="background: var(--bg-container); border: 1px solid var(--border-color); padding: 8px 16px; border-radius: 20px; font-size: 0.85rem; color: var(--text-main); font-weight: 500;">
+                            <i class="fas fa-code" style="color: #c084fc; margin-right: 6px;"></i> C# Scripting
+                        </span>
+                        <span style="background: var(--bg-container); border: 1px solid var(--border-color); padding: 8px 16px; border-radius: 20px; font-size: 0.85rem; color: var(--text-main); font-weight: 500;">
+                            <i class="fas fa-palette" style="color: #fbbf24; margin-right: 6px;"></i> Figma & Illustrator
+                        </span>
+                        <span style="background: var(--bg-container); border: 1px solid var(--border-color); padding: 8px 16px; border-radius: 20px; font-size: 0.85rem; color: var(--text-main); font-weight: 500;">
+                            <i class="fas fa-video" style="color: #f87171; margin-right: 6px;"></i> Video Production
+                        </span>
+                    </div>
                 </div>
                 
-                <div class="wow-card full-width" style="text-align: center;">
+                <div class="wow-card full-width" style="text-align: center; margin-top: 10px;">
                     <a href="resume.pdf" download class="download-btn">
                         <i class="fas fa-download"></i> Download CV (PDF)
                     </a>
@@ -94,23 +156,42 @@
             </div>
         </section>
 
+        <!-- ==================== PROJECTS SECTION ==================== -->
         <section class="page-section" id="articles">
             <h2>Articles & Projects</h2>
             <div class="section-line"></div>
             <div class="wow-grid">
+                <!-- Projek 1: AR Isyaratku -->
                 <div class="wow-card interactive">
                     <div class="project-tag">Augmented Reality</div>
                     <h3>AR ISYARATKU Application</h3>
-                    <p>Pembangunan aplikasi pembelajaran Bahasa Isyarat Malaysia (BIM) interaktif menggunakan teknologi Augmented Reality.</p>
+                    <p style="margin-bottom: 0;">Aplikasi mudah alih edutech berasaskan AR untuk pembelajaran interaktif abjad (A-Z) serta frasa asas Bahasa Isyarat Malaysia (BIM) menggunakan model gestur tangan 3D dan sistem penilaian kuiz komprehensif.</p>
                 </div>
+
+                <!-- Projek 2: RM Sehari -->
                 <div class="wow-card interactive">
                     <div class="project-tag">FinTech Design</div>
                     <h3>RM SEHARI Digital Savings Calendar</h3>
-                    <p>Kalendar simpanan digital bertema minimalis untuk pengurusan kewangan harian.</p>
+                    <p style="margin-bottom: 0;">Eksplorasi penjenamaan logo dan reka bentuk UI kalendar kewangan harian minimalis berton warna bumi, membina tabiat menyimpan menerusi slogan "Simpanan kecil hari ini, kejayaan besar esok hari".</p>
+                </div>
+
+                <!-- Projek 3: Cyberbullying Video -->
+                <div class="wow-card interactive">
+                    <div class="project-tag">Media Production</div>
+                    <h3>Cyberbullying Awareness ("The Comment Section")</h3>
+                    <p style="margin-bottom: 0;">Pembangunan video kesedaran komuniti digital yang memfokuskan kepada impak emosional buli siber, mengetengahkan kepentingan memupuk ekosistem digital beretika dan penuh empati.</p>
+                </div>
+
+                <!-- Projek 4: Quest Forest -->
+                <div class="wow-card interactive">
+                    <div class="project-tag">Game Development</div>
+                    <h3>Quest Forest: The Lost Totem</h3>
+                    <p style="margin-bottom: 0;">Projek experimental pembangunan permainan video pengembaraan hutan interaktif yang memfokuskan reka bentuk mekanik permainan kreatif dan pengurusan susun atur aset logik.</p>
                 </div>
             </div>
         </section>
 
+        <!-- ==================== CONTACT SECTION ==================== -->
         <section class="page-section" id="contact">
             <h2>Contact Me</h2>
             <div class="section-line"></div>
@@ -122,7 +203,7 @@
                     </div>
                     <h3 style="color: var(--text-main); margin-bottom: 15px; font-size: 22px;">Mari Berkolaborasi!</h3>
                     <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto 35px auto; line-height: 1.6;">
-                        Jika anda mempunyai sebarang pertanyaan atau berminat untuk menawarkan peluang kolaborasi, sila hubungi saya melalui saluran di bawah:
+                        Saya sentiasa terbuka untuk sebarang peluang latihan industri, projek kolaboratif, atau perbincangan kreatif mengenai teknologi media interaktif. Hubungi saya di saluran berikut:
                     </p>
                     
                     <div style="display: block; text-align: center; margin-top: 20px;">
@@ -145,8 +226,9 @@
 
     </div>
 
+    <!-- ==================== JAVASCRIPT LOGIC ==================== -->
     <script>
-        // 1. KEMASKINI STATUS MENU AKTIF (Ditambah baik untuk mengesan #home secara default)
+        // 1. KEMASKINI STATUS MENU AKTIF
         function kemaskiniMenuAktif() {
             const hash = window.location.hash || '#home';
             document.querySelectorAll('.nav-menu ul li').forEach(li => {
@@ -166,7 +248,6 @@
         const themeIcon = themeToggleBtn.querySelector('i');
         const themeText = document.getElementById('theme-text');
 
-        // Semak rekod simpanan jika pengguna memilih light-mode sebelum ini
         if (localStorage.getItem('theme') === 'light') {
             document.body.classList.add('light-mode');
             themeIcon.classList.replace('fa-moon', 'fa-sun');
