@@ -599,3 +599,8 @@ body.light-mode #contact .wow-card.full-width {
         margin: 10px 0 0 0;
     }
 }
+/* Memberi jarak antara ikon menu di sidebar dan teks */
+.nav-menu ul li a i {
+    margin-right: 12px;
+    font-size: 1.1rem; /* Mengimbangi saiz ikon supaya nampak sepadan dengan teks */
+}
