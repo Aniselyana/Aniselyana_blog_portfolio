@@ -4,25 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Nurul Anis Elyana</title>
-    <!-- Versi v12.0_jpeg untuk memastikan pelayar web memuatkan gaya reka bentuk baharu -->
-    <link rel="stylesheet" href="style.css?v=12.0_jpeg">
-    <!-- Pautan ikon sosial media Font Awesome -->
+    <link rel="stylesheet" href="style.css?v=12.3_theme">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <!-- SIDEBAR UTAMA (Sisi Kiri di Desktop / Menjadi Floating Dock di Telefon) -->
     <aside class="sidebar">
         <div class="sidebar-profile">
             <div class="profile-img-container">
-                <!-- ========================================================
-                     KEMASKINI: Pautan ditukar ke folder 'images/profile.jpeg'
-                     dan kod 'onerror' dibuang supaya imej tidak disembunyikan.
-                     ======================================================== -->
                 <img src="images/profile.jpeg" alt="Anis" class="profile-img">
             </div>
             <h2>Nurul Anis Elyana Binti Sahiron</h2>
             <p class="profile-tag">Media Informatics Specialist</p>
+            
+            <button id="theme-toggle" class="theme-btn">
+                <i class="fas fa-moon"></i> <span id="theme-text">Dark Mode</span>
+            </button>
         </div>
         
         <div class="social-icons">
@@ -32,7 +29,6 @@
             <a href="mailto:anisn3823@gmail.com"><i class="fas fa-envelope"></i></a>
         </div>
 
-        <!-- NAV MENU: Bertukar menjadi Floating Dock di bahagian bawah skrin telefon -->
         <nav class="nav-menu">
             <ul>
                 <li class="menu-item-home"><a href="#home"><i class="fas fa-home"></i><span class="menu-text">Home</span></a></li>
@@ -48,10 +44,8 @@
         </div>
     </aside>
         
-    <!-- KONTENA KANDUNGAN UTAMA -->
     <div class="content-container">
         
-        <!-- SEKSYEN 1: HOME -->
         <main class="page-section-hero" id="home">
             <div class="hero-overlay"></div>
             <div class="hero-text">
@@ -60,7 +54,6 @@
             </div>
         </main>
 
-        <!-- SEKSYEN 2: ABOUT ME -->
         <section class="page-section" id="about">
             <h2>About Me</h2>
             <div class="section-line"></div>
@@ -74,7 +67,6 @@
             </div>
         </section>
 
-        <!-- SEKSYEN 3: RESUME -->
         <section class="page-section" id="resume">
             <h2>Resume</h2>
             <div class="section-line"></div>
@@ -88,13 +80,15 @@
                     <p style="margin-top: 10px;">• Pembangunan AR (Unity & Vuforia Engine)</p>
                     <p>• Reka Bentuk Grafik & UI/UX (Flat Vector Style)</p>
                 </div>
+                
                 <div class="wow-card full-width" style="text-align: center;">
-                    <a href="#" class="download-btn"><i class="fas fa-download"></i> Download CV (PDF)</a>
+                    <a href="resume.pdf" download class="download-btn">
+                        <i class="fas fa-download"></i> Download CV (PDF)
+                    </a>
                 </div>
             </div>
         </section>
 
-        <!-- SEKSYEN 4: ARTICLES & PROJECTS -->
         <section class="page-section" id="articles">
             <h2>Articles & Projects</h2>
             <div class="section-line"></div>
@@ -112,25 +106,42 @@
             </div>
         </section>
 
-        <!-- SEKSYEN 5: CONTACT ME -->
         <section class="page-section" id="contact">
             <h2>Contact Me</h2>
             <div class="section-line"></div>
+            
             <div class="wow-grid">
-                <div class="wow-card full-width" style="text-align: center; padding: 40px 20px;">
-                    <div class="contact-icon-wrapper">
+                <div class="wow-card full-width" style="text-align: center; padding: 50px 30px; background: #16121e; border: 1px solid #3d2b55; border-radius: 12px;">
+                    <div class="contact-icon-wrapper" style="font-size: 40px; color: #b388ff; margin-bottom: 20px;">
                         <i class="fas fa-envelope-open-text"></i>
                     </div>
-                    <p style="margin-bottom: 15px;">Jika anda mempunyai sebarang pertanyaan atau ingin berkolaborasi, sila hubungi saya melalui emel rasmi:</p>
-                    <a href="mailto:anisn3823@gmail.com" class="email-highlight">anisn3823@gmail.com</a>
+                    <h3 style="color: #fff; margin-bottom: 15px; font-size: 22px;">Mari Berkolaborasi!</h3>
+                    <p style="color: #bbb; max-width: 600px; margin: 0 auto 35px auto; line-height: 1.6;">
+                        Jika anda mempunyai sebarang pertanyaan atau berminat untuk menawarkan peluang kolaborasi, sila hubungi saya melalui saluran di bawah:
+                    </p>
+                    
+                    <div style="display: block; text-align: center; margin-top: 20px;">
+                        <div class="contact-mini-card" style="display: inline-block; background: #1f1a29; border: 1px solid #4a3b68; padding: 20px; margin: 10px; border-radius: 8px; width: 260px; text-align: center; vertical-align: top;">
+                            <i class="fas fa-envelope" style="color: #b388ff; font-size: 24px; margin-bottom: 10px;"></i>
+                            <h4 style="color: #fff; margin: 5px 0;">Emel Rasmi</h4>
+                            <a href="mailto:anisn3823@gmail.com" style="color: #dfccff; text-decoration: none; font-size: 14px; word-break: break-all; display: block; margin-top: 5px;">anisn3823@gmail.com</a>
+                        </div>
+
+                        <div class="contact-mini-card" style="display: inline-block; background: #1f1a29; border: 1px solid #4a3b68; padding: 20px; margin: 10px; border-radius: 8px; width: 260px; text-align: center; vertical-align: top;">
+                            <i class="fab fa-linkedin" style="color: #b388ff; font-size: 24px; margin-bottom: 10px;"></i>
+                            <h4 style="color: #fff; margin: 5px 0;">LinkedIn</h4>
+                            <a href="#" target="_blank" style="color: #dfccff; text-decoration: none; font-size: 14px; display: block; margin-top: 5px;">Nurul Anis Elyana</a>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
 
     </div>
 
-    <!-- SKRIPT PENGURUSAN STATUS MENU AKTIF -->
     <script>
+        // 1. KEMASKINI STATUS MENU AKTIF
         function kemaskiniMenuAktif() {
             const hash = window.location.hash || '#home';
             document.querySelectorAll('.nav-menu ul li').forEach(li => {
@@ -144,6 +155,32 @@
         }
         window.addEventListener('hashchange', kemaskiniMenuAktif);
         window.addEventListener('load', kemaskiniMenuAktif);
+
+        // 2. LOGIK PENUKAR TEMA (DARK/LIGHT MODE)
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const themeIcon = themeToggleBtn.querySelector('i');
+        const themeText = document.getElementById('theme-text');
+
+        // Semak rekod simpanan jika pengguna memilih light-mode sebelum ini
+        if (localStorage.getItem('theme') === 'light') {
+            document.body.classList.add('light-mode');
+            themeIcon.classList.replace('fa-moon', 'fa-sun');
+            themeText.textContent = 'Light Mode';
+        }
+
+        themeToggleBtn.addEventListener('click', () => {
+            document.body.classList.toggle('light-mode');
+            
+            if (document.body.classList.contains('light-mode')) {
+                themeIcon.classList.replace('fa-moon', 'fa-sun');
+                themeText.textContent = 'Light Mode';
+                localStorage.setItem('theme', 'light');
+            } else {
+                themeIcon.classList.replace('fa-sun', 'fa-moon');
+                themeText.textContent = 'Dark Mode';
+                localStorage.setItem('theme', 'dark');
+            }
+        });
     </script>
 </body>
 </html>
