@@ -234,25 +234,40 @@ body.light-mode .sidebar-footer {
     padding: 0 20px;
 }
 
+/* DIKEMASKINI: Diturunkan kepada 0.45 supaya gambar belakang lebih menonjol */
 .hero-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(5, 4, 8, 0.88);
+    background: rgba(5, 4, 8, 0.45);
     z-index: 1;
     transition: background-color 0.4s ease;
 }
 
+/* DIKEMASKINI: Diturunkan kepada 0.45 dalam Light Mode supaya imej di imej_c18710.jpg kelihatan jelas */
 body.light-mode .hero-overlay {
-    background: rgba(244, 242, 248, 0.90);
+    background: rgba(244, 242, 248, 0.45);
 }
 
+/* DIKEMASKINI: Tambah text-shadow supaya teks kekal kontras tinggi dan mudah dibaca */
 .hero-text {
     position: relative;
     z-index: 2;
     text-align: center;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Memastikan teks tajuk utama menyerlah di atas imej latar */
+body.light-mode .hero-text h1 {
+    color: #1c1921;
+    text-shadow: 0 1px 8px rgba(255, 255, 255, 0.8);
+}
+
+body.light-mode .hero-text p {
+    color: #33303c;
+    font-weight: 500;
 }
 
 .hero-text h1 {
@@ -578,6 +593,7 @@ body.light-mode #contact .wow-card.full-width {
         gap: 15px;
     }
 
+    /* Khas paparan telefon mudah alih untuk kad hubungan */
     #contact .wow-grid div[style*="display: inline-block"] {
         width: 100%;
         margin: 10px 0 0 0;
