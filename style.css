@@ -52,6 +52,7 @@ body.light-mode {
     box-shadow: 0 4px 12px var(--card-glow);
 }
 
+
 /* ==========================================================================
    1. STRUKTUR UTAMA & RUANG DESKTOP
    ========================================================================== */
@@ -927,5 +928,22 @@ body.light-mode .hero-line-element {
     z-index: 99999 !important; /* Level dewa supaya boleh ditekan */
     pointer-events: auto !important; /* Aktifkan respon sentuhan jari */
   }
+}
+/* ==========================================================================
+   KAWALAN LIGHT MODE UNTUK BORANG CONTACT ANIS
+   ========================================================================== */
+body.light-mode .contact-input {
+    background: rgba(0, 0, 0, 0.03) !important;
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+    color: #1a202c !important; /* Tukar tulisan jadi gelap dalam Light Mode */
+}
+
+body.light-mode .contact-input::placeholder {
+    color: #a0aec0 !important; /* Warna text pembayang (placeholder) yang jelas */
+}
+
+.btn-submit-contact:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
 }
 
