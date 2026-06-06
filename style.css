@@ -445,165 +445,53 @@ body.light-mode #contact .wow-card.full-width {
 }
 
 
+
 /* ==========================================================================
-   3. REKA BENTUK RESPONSIF UNIK: HORIZONTAL SLIDE TRACK (KHAS PHONE)
+   MASTER FIX: MOBILE RESPONSIVE & CLEAN SCROLL
    ========================================================================== */
 @media (max-width: 768px) {
-    body {
-        flex-direction: column;
-        overflow-y: auto;
-        height: auto;
-    }
+  
+  /* 1. Kunci "Container" utama supaya tidak jadi 'gelong' */
+  html, body {
+    width: 100% !important;
+    height: auto !important;
+    overflow-x: hidden !important; /* Buang scroll kiri-kanan */
+    overflow-y: auto !important;  /* Benarkan scroll atas-bawah sahaja */
+    margin: 0 !important;
+    padding: 0 !important;
+    position: relative !important;
+  }
 
-    /* --- Blok Profil Atas Ringkas --- */
-    .sidebar {
-        width: 100%;
-        height: auto;
-        padding: 25px 20px 10px 20px;
-        border-right: none;
-        border-bottom: none;
-        background-color: var(--bg-primary);
-    }
+  /* 2. Bersihkan setiap Section (Buang 'gap' besar) */
+  section, .page-section, .page-section-hero, .main-content {
+    position: relative !important;
+    height: auto !important;
+    min-height: auto !important; /* PENTING: Supaya tak paksa 100vh */
+    padding: 40px 16px !important; /* Padding lebih nipis untuk phone */
+    margin: 0 !important;
+    overflow: visible !important;
+  }
 
-    .profile-img-container {
-        width: 75px;
-        height: 75px;
-        margin-bottom: 10px;
-    }
+  /* 3. Sidebar: Jadikan ia normal (bukan terapung) */
+  .sidebar, .nav-container {
+    position: relative !important;
+    width: 100% !important;
+    height: auto !important;
+    top: 0 !important;
+  }
 
-    .sidebar-profile h2 {
-        font-size: 1.15rem;
-    }
+  /* 4. Hero Title: Pastikan dia nampak cantik & tidak terlalu besar */
+  .hero-title {
+    font-size: 1.8rem !important; 
+    line-height: 1.2 !important;
+    margin: 10px 0 !important;
+  }
 
-    .profile-tag {
-        font-size: 0.7rem;
-        margin-top: 3px;
-    }
-
-    .social-icons {
-        margin-top: 8px;
-        margin-bottom: 15px;
-        gap: 12px;
-    }
-
-    .social-icons a {
-        background-color: var(--bg-card);
-        width: 32px;
-        height: 32px;
-        font-size: 13px;
-    }
-
-    .sidebar-footer {
-        display: none;
-    }
-
-    /* --- SISTEM MENU KREATIF: HORIZONTAL SLIDE TRACK --- */
-    .nav-menu {
-        width: 100%;
-        overflow-x: auto;
-        white-space: nowrap;
-        padding: 5px 0 12px 0;
-        -webkit-overflow-scrolling: touch;
-    }
-    
-    .nav-menu::-webkit-scrollbar {
-        display: none;
-    }
-
-    .nav-menu ul {
-        display: inline-flex;
-        flex-direction: row;
-        gap: 8px;
-        padding: 0 15px;
-    }
-
-    .nav-menu ul li {
-        margin-bottom: 0;
-        display: inline-block;
-    }
-
-    .nav-menu ul li a {
-        display: flex;
-        align-items: center;
-        padding: 8px 16px;
-        background-color: var(--bg-card);
-        color: var(--text-muted);
-        border-radius: 25px;
-        border: 1px solid var(--border-color);
-        font-size: 0.85rem;
-    }
-
-    .menu-icon {
-        margin-right: 6px;
-        font-size: 0.95rem;
-    }
-
-    /* Kesan Menyala Kapsul Aktif */
-    .nav-menu ul li.active a {
-        background-color: var(--bg-container);
-        color: var(--accent-color);
-        border: 1px solid var(--accent-color);
-        font-weight: bold;
-        text-shadow: 0 0 8px rgba(192, 132, 252, 0.4);
-    }
-
-    body.light-mode .nav-menu ul li.active a {
-        text-shadow: none;
-    }
-
-    /* --- KONTENA KANDUNGAN: FLOATING CANVAS LOOK --- */
-    .content-container {
-        width: 100%;
-        height: calc(100vh - 260px); /* Meluaskan sikit ruang bagi butang tema */
-        padding: 0 15px 15px 15px;
-    }
-
-    .page-section, 
-    .page-section-hero {
-        height: 100%;
-        padding: 25px 20px;
-        border-radius: 16px;
-    }
-
-    .page-section-hero .hero-text h1 {
-        display: none;
-    }
-
-    .page-section-hero .hero-text p {
-        font-size: 1rem;
-    }
-
-    .card-glass-inside {
-        padding: 20px;
-    }
-
-    body.light-mode .card-glass-inside {
-        background-color: var(--bg-container);
-    }
-
-    .page-section h2 {
-        font-size: 1.5rem;
-    }
-
-    .page-section p {
-        font-size: 0.95rem;
-    }
-
-    .wow-grid {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-
-    /* Khas paparan telefon mudah alih untuk kad hubungan */
-    #contact .wow-grid div[style*="display: inline-block"] {
-        width: 100%;
-        margin: 10px 0 0 0;
-    }
-}
-/* Memberi jarak antara ikon menu di sidebar dan teks */
-.nav-menu ul li a i {
-    margin-right: 12px;
-    font-size: 1.1rem; /* Mengimbangi saiz ikon supaya nampak sepadan dengan teks */
+  /* 5. Force Semua Elemen untuk ikut lebar skrin */
+  * {
+    max-width: 100vw !important;
+    box-sizing: border-box !important;
+  }
 }
 
 /* ==========================================================================
@@ -707,51 +595,7 @@ body.light-mode #contact .wow-card.full-width {
 }
 
 
-/* ==========================================================================
-   KAWALAN RESPONSIVE SKRIN MOBILE (FIXED SCROLL)
-   ========================================================================== */
-@media (max-width: 768px) {
-  .page-section-hero {
-    /* PUKULAN UTAMA: Bebaskan kuncian tinggi tegar & buka overflow */
-    height: auto !important;
-    min-height: 100vh !important;
-    overflow: visible !important;
-    
-    /* Tambah padding supaya teks tidak terlalu rapat dengan header profil atas */
-    padding: 120px 20px 60px 20px !important; 
-  }
-
-  /* Saiz font yang dilaraskan semula khusus untuk skrin phone */
-  .hero-title {
-    font-size: 2.2rem !important; /* Kecil sikit supaya muat skrin phone */
-    line-height: 1.2;
-  }
-
-  .hero-subtitle {
-    font-size: 1.05rem !important;
-    margin-bottom: 20px;
-  }
-
-  .hero-quote {
-    font-size: 0.95rem !important;
-    line-height: 1.5;
-  }
-}
-/* TAMBAHKAN KOD INI DI BAWAH KOD TADI */
-@media (max-width: 768px) {
-  /* Pastikan seluruh halaman boleh scroll dengan lancar */
-  body, html {
-    height: auto !important;
-    overflow-x: hidden !important; /* Buang scroll kiri-kanan yang tak perlu */
-    overflow-y: auto !important;  /* Benarkan scroll atas-bawah */
-  }
-
-  /* Buang sebarang height fixed pada container utama */
-  .main-content, .container, .wrapper {
-    height: auto !important;
-    overflow: visible !important;
-  }
-}
+/
 
 /* ==========================================================================
    INTERVENSYEN KONTRAS TULISAN (SPECIAL FOR ANIS'S LIGHT MODE)
@@ -792,135 +636,10 @@ body.light-mode .hero-line-element {
   background: #111111 !important;
 }
 
-/* ==========================================================================
-   FORCE SHOW H1 HERO TITLE ON MOBILE SCREEN
-   ========================================================================== */
-@media (max-width: 768px) {
-  
-  /* Paksa semua elemen H1 di dalam seksyen home untuk muncul dan berwarna hitam */
-  #home h1, 
-  .page-section-hero h1, 
-  .hero-title, 
-  main h1 {
-    display: block !important;       /* Membatalkan sebarang 'display: none' */
-    visibility: visible !important;  /* Membatalkan sebarang 'visibility: hidden' */
-    opacity: 1 !important;           /* Membatalkan sebarang 'opacity: 0' */
-    
-    /* Set warna hitam pekat bersama glow putih supaya wajib nampak atas langit/awan */
-    color: #000000 !important;       
-    font-size: 2.2rem !important;    /* Saiz ideal untuk skrin phone */
-    text-shadow: 0px 2px 8px rgba(255, 255, 255, 1) !important;
-    
-    /* Memastikan elemen tidak tertutup di belakang layer lain */
-    position: relative !important;
-    z-index: 99 !important; 
-  }
-}
-/* ==========================================================================
-   PENYELAMAT MOBILE SPECIFIC - PAKSA H1 MUNCUL DAN JELAS
-   ========================================================================== */
-@media (max-width: 768px) {
-  
-  /* 1. Pastikan container teks utama berada di lapisan paling atas */
-  .hero-text {
-    z-index: 10 !important;
-    position: relative !important;
-    opacity: 1 !important;
-    display: block !important;
-  }
 
-  /* 2. Paksa tulisan H1 (Hi, I'm Anis) untuk wajib keluar & berwarna gelap */
-  .hero-text h1.hero-title,
-  #home h1,
-  main h1 {
-    display: block !important;       /* Batalkan sebarang display: none */
-    visibility: visible !important;  /* Batalkan sebarang hidden */
-    opacity: 1 !important;           /* Batalkan sebarang kebeningan 0% */
-    
-    /* Set warna hitam pekat khusus untuk Light Mode pada phone */
-    color: #000000 !important;       
-    font-size: 2.0rem !important;    /* Saiz yang muat-muat skrin phone */
-    line-height: 1.2 !important;
-    margin-bottom: 15px !important;
-    
-    /* Letak bayang putih tebal di belakang huruf supaya tulisan 'pop-up' atas awan */
-    text-shadow: 0px 2px 10px rgba(255, 255, 255, 1) !important; 
-  }
 
-  /* 3. Kemaskan tulisan subtitle di bawah tajuk utama */
-  .hero-text p.hero-subtitle {
-    color: #1c1c1c !important;
-    font-weight: 600 !important;
-    font-size: 1.05rem !important;
-    text-shadow: 0px 2px 6px rgba(255, 255, 255, 1) !important;
-  }
-  
-  /* 4. Kemaskan tulisan quote */
-  .hero-text p.hero-quote {
-    color: #2b2b2b !important;
-    font-size: 0.95rem !important;
-    text-shadow: 0px 2px 6px rgba(255, 255, 255, 1) !important;
-  }
-}
-/* --- AMARAN KERAS UNTUK MOBILE SCREEN: PAKSA H1 KELUAR --- */
-@media (max-width: 768px) {
-  
-  /* Kita target terus secara direct: main -> hero-text -> h1 */
-  main.page-section-hero .hero-text h1.hero-title {
-    display: block !important;       /* Batalkan 'display: none' jika ada */
-    visibility: visible !important;  /* Batalkan 'visibility: hidden' jika ada */
-    opacity: 1 !important;           /* Batalkan sebarang transparency */
-    
-    /* Paksa warna hitam pekat di phone sewaktu Light Mode */
-    color: #000000 !important;       
-    
-    /* Kecilkan saiz sikit supaya muat skrin phone tanpa pecah layout */
-    font-size: 2.0rem !important;    
-    line-height: 1.3 !important;
-    
-    /* Letak 'glow' putih tebal kat belakang huruf supaya kalau terkena awan putih pun tetap nampak tulisan hitam tu */
-    text-shadow: 0px 2px 10px rgba(255, 255, 255, 1), 
-                 0px 0px 5px rgba(255, 255, 255, 0.8) !important;
-                 
-    position: relative !important;
-    z-index: 999 !important; /* Letak di lapisan paling atas sekali */
-  }
-}
-/* ==========================================================================
-   THE NUCLEAR RESET FOR MOBILE SCROLL (ANIS PORTFOLIO SPECIAL)
-   ========================================================================== */
-@media (max-width: 768px) {
-  
-  /* Sila letak kod ini di bahagian paling bawah fail style.css */
-@media (max-width: 768px) {
-  /* 1. Kunci supaya body tidak scroll secara berlebihan */
-  body {
-    height: auto !important;
-    overflow-y: auto !important;
-    overflow-x: hidden !important; /* Elak ruang kosong di tepi */
-  }
 
-  /* 2. Jadikan section mengikut panjang kandungan (bukan 100vh) */
-  .page-section, .page-section-hero {
-    position: relative !important; /* Tukar dari absolute ke relative */
-    height: auto !important;
-    min-height: 100vh; /* Pastikan ia sekurang-kurangnya penuh skrin */
-    padding: 40px 20px !important;
-  }
 
-  /* 3. Betulkan sidebar supaya tidak mengganggu scroll */
-  .sidebar {
-    width: 100% !important;
-    height: auto !important;
-    position: relative !important; /* Pastikan ia tidak tetap di skrin */
-    padding: 20px !important;
-  }
-
-  .content-container {
-    height: auto !important;
-    overflow-y: visible !important;
-  }
-}
 /* ==========================================================================
    KAWALAN LIGHT MODE UNTUK BORANG CONTACT ANIS
    ========================================================================== */
