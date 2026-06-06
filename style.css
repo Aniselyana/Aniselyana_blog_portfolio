@@ -951,3 +951,20 @@ body.light-mode .contact-input::placeholder {
     transform: translateY(-1px);
 }
 
+/* --- BAHAGIAN LAIN (CSS Sedia Ada Anda) --- */
+/* ... kod-kod CSS anda yang lain ... */
+
+
+/* --- TAMBAHAN UNTUK FIX DOUBLE SCROLLBAR --- */
+/* Letakkan di sini, di bahagian bawah fail */
+
+body, html {
+  height: 100%;
+  margin: 0;
+  overflow: hidden; /* Ini akan "mematikan" scrollbar luar */
+}
+
+/* Pastikan container anda mempunyai overflow yang betul */
+.content-container {
+  overflow-y: auto; /* Ini akan "menghidupkan" scrollbar dalaman sahaja */
+}
