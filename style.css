@@ -201,10 +201,11 @@ body.light-mode .sidebar-footer {
 
 /* --- KONTENA KANDUNGAN & ANIMASI GELESERAN --- */
 .content-container {
-    flex-grow: 1;
-    min-height: 100vh;   /* Tukar 'height' kepada 'min-height' */
-    position: relative;
-    overflow-y: auto;
+  flex-grow: 1;
+  /* min-height: 100vh;  <-- Buang atau komenkan baris ini */
+  height: auto;        /* Biarkan ia mengikut saiz kandungan */
+  position: relative;
+  overflow-y: auto;    /* Ini akan memastikan scroll hanya muncul jika kandungan benar-benar penuh */
 }
 
 .page-section, 
@@ -553,10 +554,12 @@ body.light-mode #contact .wow-card.full-width {
 
     /* --- KONTENA KANDUNGAN: FLOATING CANVAS LOOK --- */
     .content-container {
-        width: 100%;
-        height: calc(100vh - 260px); /* Meluaskan sikit ruang bagi butang tema */
-        padding: 0 15px 15px 15px;
-    }
+  width: 100%;
+  min-height: calc(100vh - 260px); /* Tukar height kepada min-height */
+  height: auto;                     /* Biarkan ia ikut saiz kandungan */
+  padding: 0 15px 15px 15px;
+  overflow-y: auto;                 /* Scrollbar hanya muncul jika perlu */
+}
 
     .page-section, 
     .page-section-hero {
