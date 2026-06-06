@@ -887,49 +887,39 @@ body.light-mode .hero-line-element {
   }
 }
 /* ==========================================================================
-   MOBILE SCROLL FIX (VERSION 2026 - ANIS UPDATED)
+   THE NUCLEAR RESET FOR MOBILE SCROLL (ANIS PORTFOLIO SPECIAL)
    ========================================================================== */
 @media (max-width: 768px) {
   
-  /* 1. Reset Body & HTML (Buang 'teranjal' dan 'bergelong') */
-  html, body {
+  /* Sila letak kod ini di bahagian paling bawah fail style.css */
+@media (max-width: 768px) {
+  /* 1. Kunci supaya body tidak scroll secara berlebihan */
+  body {
     height: auto !important;
-    overflow-x: hidden !important; /* Buang ruang tepi */
-    overflow-y: auto !important;  /* Benarkan scroll */
-    overscroll-behavior: none !important; /* Matikan efek getah/pantul */
-    margin: 0 !important;
-    padding: 0 !important;
-    width: 100% !important;
-    -webkit-overflow-scrolling: touch !important; /* Smooth scroll */
+    overflow-y: auto !important;
+    overflow-x: hidden !important; /* Elak ruang kosong di tepi */
   }
 
-  /* 2. Reset Section (Pastikan ikut saiz content) */
-  section {
+  /* 2. Jadikan section mengikut panjang kandungan (bukan 100vh) */
+  .page-section, .page-section-hero {
+    position: relative !important; /* Tukar dari absolute ke relative */
     height: auto !important;
-    min-height: auto !important;
+    min-height: 100vh; /* Pastikan ia sekurang-kurangnya penuh skrin */
     padding: 40px 20px !important;
-    box-sizing: border-box !important;
   }
 
-  /* 3. Reset Sidebar & Container (Jadikan dia natural) */
-  .sidebar, .nav-container, .main-content {
-    position: relative !important;
+  /* 3. Betulkan sidebar supaya tidak mengganggu scroll */
+  .sidebar {
     width: 100% !important;
     height: auto !important;
+    position: relative !important; /* Pastikan ia tidak tetap di skrin */
+    padding: 20px !important;
   }
 
-  /* 4. Reset Elemen Lain (Elak masalah z-index melampau) */
-  .profile-card, .header, nav {
-    z-index: 10 !important;
-    pointer-events: auto !important;
+  .content-container {
+    height: auto !important;
+    overflow-y: visible !important;
   }
-
-  /* 5. Paksa semua elemen muat dalam skrin */
-  * {
-    max-width: 100% !important;
-    box-sizing: border-box !important;
-  }
-}
 }
 /* ==========================================================================
    KAWALAN LIGHT MODE UNTUK BORANG CONTACT ANIS
