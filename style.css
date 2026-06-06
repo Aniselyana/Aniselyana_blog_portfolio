@@ -201,11 +201,10 @@ body.light-mode .sidebar-footer {
 
 /* --- KONTENA KANDUNGAN & ANIMASI GELESERAN --- */
 .content-container {
-  flex-grow: 1;
-  /* min-height: 100vh;  <-- Buang atau komenkan baris ini */
-  height: auto;        /* Biarkan ia mengikut saiz kandungan */
-  position: relative;
-  overflow-y: auto;    /* Ini akan memastikan scroll hanya muncul jika kandungan benar-benar penuh */
+    flex-grow: 1;
+    min-height: 100vh;   /* Tukar 'height' kepada 'min-height' */
+    position: relative;
+    overflow-y: auto;
 }
 
 .page-section, 
@@ -554,12 +553,10 @@ body.light-mode #contact .wow-card.full-width {
 
     /* --- KONTENA KANDUNGAN: FLOATING CANVAS LOOK --- */
     .content-container {
-  width: 100%;
-  min-height: calc(100vh - 260px); /* Tukar height kepada min-height */
-  height: auto;                     /* Biarkan ia ikut saiz kandungan */
-  padding: 0 15px 15px 15px;
-  overflow-y: auto;                 /* Scrollbar hanya muncul jika perlu */
-}
+        width: 100%;
+        height: calc(100vh - 260px); /* Meluaskan sikit ruang bagi butang tema */
+        padding: 0 15px 15px 15px;
+    }
 
     .page-section, 
     .page-section-hero {
@@ -951,20 +948,3 @@ body.light-mode .contact-input::placeholder {
     transform: translateY(-1px);
 }
 
-/* --- BAHAGIAN LAIN (CSS Sedia Ada Anda) --- */
-/* ... kod-kod CSS anda yang lain ... */
-
-
-/* --- TAMBAHAN UNTUK FIX DOUBLE SCROLLBAR --- */
-/* Letakkan di sini, di bahagian bawah fail */
-
-body, html {
-  height: 100%;
-  margin: 0;
-  overflow: hidden; /* Ini akan "mematikan" scrollbar luar */
-}
-
-/* Pastikan container anda mempunyai overflow yang betul */
-.content-container {
-  overflow-y: auto; /* Ini akan "menghidupkan" scrollbar dalaman sahaja */
-}
