@@ -605,28 +605,243 @@ body.light-mode #contact .wow-card.full-width {
     font-size: 1.1rem; /* Mengimbangi saiz ikon supaya nampak sepadan dengan teks */
 }
 
-/* --- FIX SCROLL SECARA MENYELURUH UNTUK MOBILE --- */
-@media (max-width: 768px) {
-  /* 1. Paksa html dan body untuk aktifkan scroll */
-  html, body {
-    overflow-y: auto !important;
-    overflow-x: hidden !important;
-    height: auto !important;
-    min-height: 100vh !important;
-  }
+/* ==========================================================================
+   DESAIN HERO/HOME SECTION (DESKTOP & MOBILE FRIENDLY)
+   ========================================================================== */
+.page-section-hero {
+  position: relative;
+  transition: all 0.4s ease;
+  padding: 80px 24px;
+  height: 100vh; /* Satu skrin penuh pada desktop */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Kemas pada desktop */
+}
 
-  /* 2. Bebaskan sebarang container utama yang tersekat kedudukannya */
-  #home, .home, .home-container, .main-content, main {
-    position: relative !important; /* Tukar dari fixed/absolute jika ada */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--hero-overlay-bg);
+  z-index: 1;
+  transition: all 0.4s ease;
+}
+
+.hero-text {
+  z-index: 2;
+  position: relative;
+  text-shadow: var(--hero-shadow);
+  transition: all 0.4s ease;
+  width: 100%;
+  max-width: 840px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.welcome-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.hero-line-element {
+  display: inline-block;
+  width: 40px;
+  height: 1px;
+  background: var(--hero-line);
+  transition: all 0.4s ease;
+}
+
+.welcome-sub {
+  font-size: 0.85rem;
+  color: var(--hero-accent);
+  font-weight: 600;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  margin: 0;
+  font-style: italic;
+  transition: all 0.4s ease;
+}
+
+.hero-title {
+  font-size: 3.2rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  line-height: 1.1;
+  color: var(--hero-text-main);
+  transition: all 0.4s ease;
+  letter-spacing: -0.5px;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: var(--hero-text-muted);
+  font-weight: 500;
+  margin-bottom: 24px;
+  letter-spacing: 0.8px;
+  transition: all 0.4s ease;
+  opacity: 0.95;
+}
+
+.hero-quote {
+  font-size: 1.02rem;
+  color: var(--hero-text-sub);
+  max-width: 680px;
+  margin: 0 auto;
+  line-height: 1.65;
+  font-style: italic;
+  transition: all 0.4s ease;
+}
+
+.hero-quote .highlight {
+  color: var(--hero-accent);
+  font-weight: 700;
+  border-bottom: 1px dotted var(--hero-accent);
+  padding-bottom: 2px;
+}
+
+/* ==========================================================================
+   KAWALAN RESPONSIVE SKRIN MOBILE (FIXED SCROLL)
+   ========================================================================== */
+@media (max-width: 768px) {
+  .page-section-hero {
+    /* PUKULAN UTAMA: Bebaskan kuncian tinggi tegar & buka overflow */
     height: auto !important;
     min-height: 100vh !important;
     overflow: visible !important;
+    
+    /* Tambah padding supaya teks tidak terlalu rapat dengan header profil atas */
+    padding: 120px 20px 60px 20px !important; 
   }
 
-  /* 3. Pastikan bahagian gambar (hero section) boleh memanjang ke bawah */
-  .hero-section, .banner, .intro {
-    height: auto !important;
-    min-height: 100vh !important;
-    padding-bottom: 50px; /* Bagi ruang sikit di bawah */
+  /* Saiz font yang dilaraskan semula khusus untuk skrin phone */
+  .hero-title {
+    font-size: 2.2rem !important; /* Kecil sikit supaya muat skrin phone */
+    line-height: 1.2;
+  }
+
+  .hero-subtitle {
+    font-size: 1.05rem !important;
+    margin-bottom: 20px;
+  }
+
+  .hero-quote {
+    font-size: 0.95rem !important;
+    line-height: 1.5;
+  }
+}
+
+/* ==========================================================================
+   INTERVENSYEN KONTRAS TULISAN (SPECIAL FOR ANIS'S LIGHT MODE)
+   ========================================================================== */
+body.light-mode .page-section-hero {
+  /* 1. Kita gelapkan overlay putih tu sikit (opacity 0.55) supaya imej belakang tak terlalu membutakan tulisan */
+  --hero-overlay-bg: rgba(255, 255, 255, 0.55) !important;
+}
+
+/* 2. Paksa tulisan utama jadi hitam pekat & tajam */
+body.light-mode .hero-title {
+  color: #111111 !important;
+  text-shadow: 0px 1px 3px rgba(255, 255, 255, 0.8) !important; /* Bayang putih halus di belakang huruf */
+}
+
+/* 3. Subtitle (Information Technology) ditukarkan dari kelabu cair ke charcoal/hitam pekat */
+body.light-mode .hero-subtitle {
+  color: #1a1a1a !important; 
+  font-weight: 600 !important; /* Tebalkan sikit tulisan pada skrin cerah */
+  text-shadow: 0px 1px 2px rgba(255, 255, 255, 0.8) !important;
+}
+
+/* 4. Bahagian quote dibesarkan kontrasnya */
+body.light-mode .hero-quote {
+  color: #222222 !important;
+  font-weight: 500 !important;
+  text-shadow: 0px 1px 2px rgba(255, 255, 255, 0.8) !important;
+}
+
+/* 5. Highlight "multimedia technology" ditukar ke ungu yang lebih pekat/gelap supaya tak tenggelam dalam daun hijau */
+body.light-mode .hero-quote .highlight {
+  color: #4b0082 !important; /* Indigo/Ungu pekat */
+  border-bottom: 2px dashed #4b0082 !important;
+}
+
+/* 6. Garisan tepi Welcome To My Space dijadikeun hitam */
+body.light-mode .hero-line-element {
+  background: #111111 !important;
+}
+
+/* ==========================================================================
+   FORCE SHOW H1 HERO TITLE ON MOBILE SCREEN
+   ========================================================================== */
+@media (max-width: 768px) {
+  
+  /* Paksa semua elemen H1 di dalam seksyen home untuk muncul dan berwarna hitam */
+  #home h1, 
+  .page-section-hero h1, 
+  .hero-title, 
+  main h1 {
+    display: block !important;       /* Membatalkan sebarang 'display: none' */
+    visibility: visible !important;  /* Membatalkan sebarang 'visibility: hidden' */
+    opacity: 1 !important;           /* Membatalkan sebarang 'opacity: 0' */
+    
+    /* Set warna hitam pekat bersama glow putih supaya wajib nampak atas langit/awan */
+    color: #000000 !important;       
+    font-size: 2.2rem !important;    /* Saiz ideal untuk skrin phone */
+    text-shadow: 0px 2px 8px rgba(255, 255, 255, 1) !important;
+    
+    /* Memastikan elemen tidak tertutup di belakang layer lain */
+    position: relative !important;
+    z-index: 99 !important; 
+  }
+}
+/* ==========================================================================
+   PENYELAMAT MOBILE SPECIFIC - PAKSA H1 MUNCUL DAN JELAS
+   ========================================================================== */
+@media (max-width: 768px) {
+  
+  /* 1. Pastikan container teks utama berada di lapisan paling atas */
+  .hero-text {
+    z-index: 10 !important;
+    position: relative !important;
+    opacity: 1 !important;
+    display: block !important;
+  }
+
+  /* 2. Paksa tulisan H1 (Hi, I'm Anis) untuk wajib keluar & berwarna gelap */
+  .hero-text h1.hero-title,
+  #home h1,
+  main h1 {
+    display: block !important;       /* Batalkan sebarang display: none */
+    visibility: visible !important;  /* Batalkan sebarang hidden */
+    opacity: 1 !important;           /* Batalkan sebarang kebeningan 0% */
+    
+    /* Set warna hitam pekat khusus untuk Light Mode pada phone */
+    color: #000000 !important;       
+    font-size: 2.0rem !important;    /* Saiz yang muat-muat skrin phone */
+    line-height: 1.2 !important;
+    margin-bottom: 15px !important;
+    
+    /* Letak bayang putih tebal di belakang huruf supaya tulisan 'pop-up' atas awan */
+    text-shadow: 0px 2px 10px rgba(255, 255, 255, 1) !important; 
+  }
+
+  /* 3. Kemaskan tulisan subtitle di bawah tajuk utama */
+  .hero-text p.hero-subtitle {
+    color: #1c1c1c !important;
+    font-weight: 600 !important;
+    font-size: 1.05rem !important;
+    text-shadow: 0px 2px 6px rgba(255, 255, 255, 1) !important;
+  }
+  
+  /* 4. Kemaskan tulisan quote */
+  .hero-text p.hero-quote {
+    color: #2b2b2b !important;
+    font-size: 0.95rem !important;
+    text-shadow: 0px 2px 6px rgba(255, 255, 255, 1) !important;
   }
 }
