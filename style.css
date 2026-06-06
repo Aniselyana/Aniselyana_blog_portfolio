@@ -67,8 +67,8 @@ body {
     display: flex;
     background-color: var(--bg-primary);
     color: var(--text-main);
-    height: 100vh;
-    overflow: hidden;
+    height: auto;
+    overflow-y: auto;
     transition: background-color 0.4s ease, color 0.4s ease;
 }
 
@@ -202,9 +202,9 @@ body.light-mode .sidebar-footer {
 /* --- KONTENA KANDUNGAN & ANIMASI GELESERAN --- */
 .content-container {
     flex-grow: 1;
-    height: 100vh;
+    min-height: 100vh;   /* Tukar 'height' kepada 'min-height' */
     position: relative;
-    overflow: hidden;
+    overflow-y: auto;
 }
 
 .page-section, 
@@ -451,8 +451,8 @@ body.light-mode #contact .wow-card.full-width {
 @media (max-width: 768px) {
     body {
         flex-direction: column;
-        overflow: hidden;
-        height: 100vh;
+        overflow-y: auto;
+        height: auto;
     }
 
     /* --- Blok Profil Atas Ringkas --- */
