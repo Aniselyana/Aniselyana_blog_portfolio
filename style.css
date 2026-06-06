@@ -605,3 +605,28 @@ body.light-mode #contact .wow-card.full-width {
     font-size: 1.1rem; /* Mengimbangi saiz ikon supaya nampak sepadan dengan teks */
 }
 
+/* --- FIX SCROLL SECARA MENYELURUH UNTUK MOBILE --- */
+@media (max-width: 768px) {
+  /* 1. Paksa html dan body untuk aktifkan scroll */
+  html, body {
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    height: auto !important;
+    min-height: 100vh !important;
+  }
+
+  /* 2. Bebaskan sebarang container utama yang tersekat kedudukannya */
+  #home, .home, .home-container, .main-content, main {
+    position: relative !important; /* Tukar dari fixed/absolute jika ada */
+    height: auto !important;
+    min-height: 100vh !important;
+    overflow: visible !important;
+  }
+
+  /* 3. Pastikan bahagian gambar (hero section) boleh memanjang ke bawah */
+  .hero-section, .banner, .intro {
+    height: auto !important;
+    min-height: 100vh !important;
+    padding-bottom: 50px; /* Bagi ruang sikit di bawah */
+  }
+}
